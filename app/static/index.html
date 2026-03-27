@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum Workbench</title>
+  <meta name="description" content="Reviewable quantum workflow lab with local simulation, IBM Quantum and Amazon Braket submission, and experiment history.">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="shell hero">
+    <div>
+      <p class="eyebrow">Quantum Workbench</p>
+      <h1>Real-backend quantum runs with a product-shaped review flow.</h1>
+      <p class="lede">
+        Compare Bell, GHZ, and QAOA-style runs across an ideal local sampler, an Amazon Braket local simulator, and IBM Quantum or Amazon Braket backends.
+        The point is not just to run a circuit. The point is to keep backend choice, queue posture, and result history reviewable.
+      </p>
+    </div>
+    <div class="hero-card" id="runtimeCard"></div>
+  </header>
+
+  <main class="shell layout">
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Experiments</p>
+          <h2>Choose a fixed experiment</h2>
+        </div>
+        <button class="secondary" id="refreshExperiments">Refresh</button>
+      </div>
+      <div id="experiments" class="grid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Execution</p>
+          <h2>Run local or submit to hardware</h2>
+        </div>
+      </div>
+      <form id="runForm" class="form-grid">
+        <label>
+          Experiment
+          <select id="experimentId" name="experimentId"></select>
+        </label>
+        <label>
+          Shots
+          <input id="shots" name="shots" type="number" min="128" max="8192" step="128" value="1024">
+        </label>
+        <label>
+          IBM backend
+          <select id="backendName" name="backendName">
+            <option value="">Auto-select least busy backend</option>
+          </select>
+        </label>
+        <label>
+          Braket backend
+          <select id="braketBackendName" name="braketBackendName">
+            <option value="">Auto-select least busy Braket QPU</option>
+          </select>
+        </label>
+        <label>
+          Gamma (QAOA only)
+          <input id="gamma" name="gamma" type="number" step="0.05" value="0.9">
+        </label>
+        <label>
+          Beta (QAOA only)
+          <input id="beta" name="beta" type="number" step="0.05" value="0.35">
+        </label>
+      </form>
+      <div class="button-row">
+        <button class="primary" id="runLocal">Run Local Simulator</button>
+        <button class="secondary" id="runBraketLocal">Run Braket Local Simulator</button>
+        <button class="secondary" id="compareLocal">Compare Local Backends</button>
+        <button class="secondary" id="runHardware">Submit to IBM Quantum</button>
+        <button class="secondary" id="runBraketHardware">Submit to Amazon Braket</button>
+      </div>
+      <p id="runStatus" class="status">Waiting for a run.</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Latest result</p>
+          <h2>Counts and analysis</h2>
+        </div>
+      </div>
+      <pre id="latestResult" class="code-block">No run yet.</pre>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Evidence scorecard</p>
+          <h2>Latest proof by experiment and backend</h2>
+        </div>
+        <button class="secondary" id="refreshScorecard">Refresh scorecard</button>
+      </div>
+      <div id="scorecard" class="list"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">IBM proof pack</p>
+          <h2>Hardware, transpilation, and queue posture</h2>
+        </div>
+        <button class="secondary" id="refreshIbmProof">Refresh IBM proof</button>
+      </div>
+      <pre id="ibmProof" class="code-block">No IBM proof loaded yet.</pre>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Domain proof</p>
+          <h2>H2-style VQE mini workflow</h2>
+        </div>
+        <button class="secondary" id="refreshDomainPack">Refresh domain proof</button>
+      </div>
+      <pre id="domainProof" class="code-block">No domain proof loaded yet.</pre>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Run history</p>
+          <h2>Persisted results dashboard</h2>
+        </div>
+        <button class="secondary" id="refreshRuns">Refresh history</button>
+      </div>
+      <div id="runs" class="list"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

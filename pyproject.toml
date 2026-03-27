@@ -1,0 +1,31 @@
+[project]
+name = "quantum-workbench"
+version = "0.1.0"
+description = "Real-backend quantum workbench with IBM Quantum runtime support and reviewable experiment surfaces."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "amazon-braket-sdk>=1.81,<2",
+  "fastapi>=0.115,<1",
+  "pydantic>=2.8,<3",
+  "qiskit>=1.4,<3",
+  "qiskit-ibm-runtime>=0.40,<1",
+  "uvicorn[standard]>=0.32,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.28,<1",
+  "pytest>=8.3,<9",
+  "ruff>=0.8,<1",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

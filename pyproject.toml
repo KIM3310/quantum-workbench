@@ -32,3 +32,6 @@ include = ["app*"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
+
+[project.urls]
+Repository = "https://github.com/KIM3310/quantum-workbench"

@@ -23,6 +23,10 @@ A quantum experiment desk that shows research-tool discipline: local simulation 
 - **Verification:** Run `pytest -v` and the architecture validation script if reviewing repository posture.
 - **Commercial read:** Treat it as an education/workshop surface, not a production quantum decision engine.
 
+## Commercialization Playbook
+
+- [Monetization and GTM playbook](docs/monetization-playbook.md) maps the repository to buyer segments, offer ladder, pricing hypotheses, proof gates, and risk boundaries.
+
 ## What it does
 
 - Pick from built-in experiments (Bell pair, GHZ, QAOA, H2 VQE)

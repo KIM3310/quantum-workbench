@@ -4,6 +4,18 @@ A web-based experiment desk for running quantum circuits across local simulators
 
 ![Quantum Workbench home](docs/screenshots/quantum-workbench-home.png)
 
+## Product and Review Surface
+
+A quantum experiment desk that shows research-tool discipline: local simulation first, managed backends second.
+
+| Lens | Definition |
+|---|---|
+| Buyer or user | Research teams, students, technical reviewers, and cloud/quantum platform evaluators. |
+| Commercial route | Use as a technical workshop artifact, experiment dashboard starter, or research-support prototype. |
+| Review signal | Qiskit/Braket framing, local simulation, optional managed-backend adapters, and experiment review surfaces. |
+| Safety boundary | Managed backend use should be opt-in and budget-controlled; local simulation remains the safe default. |
+| Fast proof | Run the local simulation path and inspect generated experiment outputs and adapter boundaries. |
+
 ## What it does
 
 - Pick from built-in experiments (Bell pair, GHZ, QAOA, H2 VQE)

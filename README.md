@@ -16,6 +16,13 @@ A quantum experiment desk that shows research-tool discipline: local simulation 
 | Safety boundary | Managed backend use should be opt-in and budget-controlled; local simulation remains the safe default. |
 | Fast proof | Run the local simulation path and inspect generated experiment outputs and adapter boundaries. |
 
+## Reviewer Fast Path
+
+- **First minute:** Generate one circuit, inspect the explanation, then compare the simulation output.
+- **Local demo:** Run the Quick Start commands and open `http://127.0.0.1:8000/`.
+- **Verification:** Run `pytest -v` and the architecture validation script if reviewing repository posture.
+- **Commercial read:** Treat it as an education/workshop surface, not a production quantum decision engine.
+
 ## What it does
 
 - Pick from built-in experiments (Bell pair, GHZ, QAOA, H2 VQE)

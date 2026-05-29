@@ -1,37 +1,33 @@
-# Reviewer Evidence Map - Quantum Workbench
+# Review Guide - Quantum Workbench
 
-Updated: 2026-05-29
+Updated: 2026-05-30
 
-This document is the short path for a technical reviewer, engineering leader, product evaluator, or buyer who wants to understand what this repository proves without wandering through every file.
+Use this page as the short path through the repository. It keeps the review grounded in the code, docs, commands, and boundaries that are already present.
 
-## One-Line Proof
+## Summary
 
-**B2B/B2C education and research tooling.** Experiment desk comparing local quantum simulation with optional managed backends.
-
-## Audience and Commercial Angle
-
-| Lens | Answer |
+| Field | Notes |
 |---|---|
-| Primary reviewer | Students, research teams, workshop instructors, and cloud/quantum platform evaluators. |
-| Technical signal | Can the project be explained, verified, bounded, and extended like a real product surface? |
-| Buyer signal | Is there a narrow operational pain, a runnable proof path, and a risk-aware pilot shape? |
-| Stack signal | Python |
+| Lane | B2B/B2C education and research tooling |
+| Core idea | Experiment desk comparing local quantum simulation with optional managed backends. |
+| Primary reader | Students, research teams, workshop instructors, and cloud/quantum platform evaluators. |
+| Stack | Python |
 
-## Seven-Minute Review Route
+## Open First
 
-1. Read the README `Product and Review Surface` and `Reviewer Fast Path` sections.
-2. Open `docs/monetization-playbook.md` to understand the buyer, offer ladder, and GTM hypothesis.
-3. Run or inspect the strongest local quality gate below.
-4. Inspect CI workflow definitions and test fixtures before deeper implementation review.
-5. Check the risk boundaries so claims stay credible and not overextended.
+1. Start with the README fast path and architecture section.
+2. Open `docs/monetization-playbook.md` only when reviewing the product or service angle.
+3. Check the commands below before making claims about quality.
+4. Skim the CI workflows and fixture data before deeper implementation review.
+5. Read the boundaries section before presenting the project externally.
 
-## Verification Commands
+## Checks
 
 | Purpose | Command |
 |---|---|
 | Test suite | `python -m pytest` |
 
-## CI and Automation Surface
+## CI
 
 - .github/workflows/architecture-blueprint.yml
 - .github/workflows/ci.yml
@@ -40,33 +36,29 @@ This document is the short path for a technical reviewer, engineering leader, pr
 - .github/workflows/repository-surface.yml
 - .github/workflows/secret-scan.yml
 
-## Evidence Inventory
+## Evidence
 
 - pytest/ruff-style local verification path
 - pytest passes
 - Local simulator works
 - Managed backend is opt-in
 
-## Commercialization Snapshot
+## Commercial Notes
 
-| Offer | Pricing hypothesis |
+| Possible offer | Working price assumption |
 |---|---|
 | Workshop artifact | $500-$2k workshop kit |
 | Experiment dashboard starter | $3k-$12k research dashboard |
 | Research-support prototype | $99-$499/month education workspace |
 
-## Risk Boundaries
+## Boundaries
 
 - Budget controls for managed backends
 - Approximation limits explicit
 - No production decision claims
 
-## Metrics That Matter
+## Useful Metrics
 
 - Experiment completion
 - Backend cost visibility
 - Learning outcome feedback
-
-## Review Verdict
-
-This repository should be evaluated as part of the broader KIM3310 portfolio: it is strongest when the reviewer sees the link between a concrete implementation, a documented verification path, and an externally credible operating story.

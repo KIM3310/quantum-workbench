@@ -2,41 +2,26 @@
 
 Updated: 2026-05-30
 
-These notes keep the repository easy to review without overstating what is production-ready.
+These notes keep the repository available as supporting proof while preventing it from weakening the main portfolio signal.
 
 ## Profile
 
 | Field | Value |
 |---|---|
 | Repository | `quantum-workbench` |
-| Primary stack | Python |
-| Review expectation | Local review should not require customer data or production credentials. |
+| Status | Archived supporting proof |
+| Portfolio role | Keep as optional technical breadth, not a front-door project. |
+| Current successor | agent-orchestration-benchmark, tool-call-finetune-lab, and stage-pilot |
 
-## Commands
+## Presentation Boundary
 
-| Purpose | Command |
-|---|---|
-| Test suite | `python -m pytest` |
-
-## CI
-
-- .github/workflows/architecture-blueprint.yml
-- .github/workflows/ci.yml
-- .github/workflows/dependency-review.yml
-- .github/workflows/repository-health.yml
-- .github/workflows/repository-surface.yml
-- .github/workflows/secret-scan.yml
-
-## Boundaries
-
-- Demo, fixture, and synthetic-data modes must stay clearly labeled.
-- Provider keys, tenant credentials, warehouse secrets, medical data, financial data, or customer logs must never be committed.
-- Production claims require environment-specific validation, monitoring, rollback, and human approval paths.
-- Screenshots, videos, and README claims should match the current implementation and documented commands.
+- Do not lead with this repository in career, enterprise-buyer, or consulting conversations.
+- Keep it behind the active B2B/enterprise portfolio unless the reviewer asks for this exact domain.
+- Treat any revenue idea here as optional or experimental, not the main commercial thesis.
+- Refresh dependencies, demos, validation, and support ownership before reviving it.
 
 ## Before Presenting
 
-- README explains the user, the pain, the safety boundary, and the fast proof path.
-- `docs/monetization-playbook.md` explains the product, pilot, service, or paid proof-of-value angle when relevant.
-- Tests or smoke checks are documented even when optional infrastructure is unavailable.
-- Failure modes and unsupported claims are visible before the project is presented externally.
+- The archived/supporting status is visible in README and `docs/portfolio-fit.md`.
+- Claims are limited to what the public repository actually demonstrates.
+- Any sensitive, financial, health, personal, or behavioral data boundary is stated conservatively.

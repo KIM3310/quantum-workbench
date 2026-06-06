@@ -32,9 +32,9 @@ This repository is now curated as supporting material. Review it only after the 
 
 | Possible offer | Working scope assumption | Scope |
 |---|---|---|
-| Workshop artifact | $500-$2k workshop kit | Scoped after review. |
-| Experiment dashboard starter | $3k-$12k research dashboard | Scoped after review. |
-| Research-support prototype | $99-$499/month education workspace | Scoped after review. |
+| Workshop artifact | Scope after buyer intake | Scoped after review. |
+| Experiment dashboard starter | Scope after buyer intake | Scoped after review. |
+| Research-support prototype | Scope after buyer intake | Scoped after review. |
 
 ## Boundaries
 

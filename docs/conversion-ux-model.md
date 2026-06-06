@@ -49,9 +49,9 @@ This note specializes the repository for service launch. It combines product str
 
 ## Conversion Path
 
-- Optional entry: Workshop artifact ($500-$2k workshop kit) when this archived proof exactly matches the buyer problem.
-- Revival step: Experiment dashboard starter ($3k-$12k research dashboard) only after the active successor and support boundary are clear.
-- Longer-term path: Research-support prototype ($99-$499/month education workspace) if the repository is refreshed and assigned an owner.
+- Optional entry: Workshop artifact (scope after buyer intake) when this archived proof exactly matches the buyer problem.
+- Revival step: Experiment dashboard starter (scope after buyer intake) only after the active successor and support boundary are clear.
+- Longer-term path: Research-support prototype (scope after buyer intake) if the repository is refreshed and assigned an owner.
 
 ## Scope Frame
 

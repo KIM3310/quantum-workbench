@@ -12,7 +12,7 @@ This is the buyer-ready version of the repository. It turns the technical proof 
 | Buyer | Students, research teams, workshop instructors, and cloud/quantum platform evaluators. |
 | Pain wedge | Experiment desk comparing local quantum simulation with optional managed backends. |
 | Front-door offer | Workshop artifact |
-| Entry scope | $500-$2k workshop kit |
+| Entry scope | Scope after buyer intake |
 | Proof before pitch | pytest passes |
 | Next buyer action | Review one proof artifact, then choose diagnostic, workshop, pilot, support, or revival path. |
 
@@ -20,9 +20,9 @@ This is the buyer-ready version of the repository. It turns the technical proof 
 
 | Offer | Scope assumption | Buyer-facing scope |
 |---|---|---|
-| Workshop artifact | $500-$2k workshop kit | Publish 4 experiment guides |
-| Experiment dashboard starter | $3k-$12k research dashboard | Record local-vs-cloud demo |
-| Research-support prototype | $99-$499/month education workspace | Offer workshop package |
+| Workshop artifact | Scope after buyer intake | Publish 4 experiment guides |
+| Experiment dashboard starter | Scope after buyer intake | Record local-vs-cloud demo |
+| Research-support prototype | Scope after buyer intake | Offer workshop package |
 
 ## Close Path
 

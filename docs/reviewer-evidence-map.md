@@ -30,7 +30,7 @@ This repository is now curated as supporting material. Review it only after the 
 
 ## Commercial Notes
 
-| Possible offer | Working price assumption | Scope |
+| Possible offer | Working scope assumption | Scope |
 |---|---|---|
 | Workshop artifact | $500-$2k workshop kit | Scoped after review. |
 | Experiment dashboard starter | $3k-$12k research dashboard | Scoped after review. |

@@ -12,13 +12,13 @@ This is the buyer-ready version of the repository. It turns the technical proof 
 | Buyer | Students, research teams, workshop instructors, and cloud/quantum platform evaluators. |
 | Pain wedge | Experiment desk comparing local quantum simulation with optional managed backends. |
 | Front-door offer | Workshop artifact |
-| Entry price assumption | $500-$2k workshop kit |
+| Entry scope | $500-$2k workshop kit |
 | Proof before pitch | pytest passes |
 | Next buyer action | Review one proof artifact, then choose diagnostic, workshop, pilot, support, or revival path. |
 
 ## Packaged Offer Ladder
 
-| Offer | Price assumption | Buyer-facing scope |
+| Offer | Scope assumption | Buyer-facing scope |
 |---|---|---|
 | Workshop artifact | $500-$2k workshop kit | Publish 4 experiment guides |
 | Experiment dashboard starter | $3k-$12k research dashboard | Record local-vs-cloud demo |
@@ -35,7 +35,7 @@ This is the buyer-ready version of the repository. It turns the technical proof 
 - Cognitive fluency: one buyer, one painful workflow, one proof artifact, one next step.
 - Attention design: keep the primary CTA visible and remove side quests before the proof moment.
 - Risk reversal: make the first paid step small, time-boxed, and tied to acceptance criteria.
-- Proof before persuasion: show tests, demo output, scorecards, exports, or review packs before pricing.
+- Proof before persuasion: show tests, demo output, scorecards, exports, or review packs before scope discussion.
 - Autonomy: make opt-in, data boundaries, cancellation, and unsupported claims visible.
 - Status clarity: supporting or archived projects must not compete with the current flagship story.
 
@@ -61,9 +61,9 @@ This is the buyer-ready version of the repository. It turns the technical proof 
 
 ## Guardrails
 
-- Do not invent customers, revenue, endorsements, logos, or certifications.
+- Do not invent customers, financial outcomes, endorsements, logos, or certifications.
 - Do not claim production readiness without scoped validation, data access, monitoring, and support ownership.
-- Do not use pressure tactics, fake scarcity, hidden continuity, or confusing pricing.
+- Do not use pressure tactics, fake scarcity, hidden continuity, or confusing scope.
 - Budget controls for managed backends
 - Approximation limits explicit
 - No production decision claims

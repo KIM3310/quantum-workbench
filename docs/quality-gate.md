@@ -15,9 +15,9 @@ These notes keep the repository available as supporting proof while preventing i
 
 ## Presentation Boundary
 
-- Do not lead with this repository in career, enterprise-buyer, or consulting conversations.
+- Do not lead with this repository in career, enterprise-reviewer, or consulting conversations.
 - Keep it behind the active B2B/enterprise portfolio unless the reviewer asks for this exact domain.
-- Treat any revenue idea here as optional or experimental, not the main commercial thesis.
+- Treat any growth idea here as optional or experimental, not the main technical thesis.
 - Refresh dependencies, demos, validation, and support ownership before reviving it.
 
 ## Before Presenting

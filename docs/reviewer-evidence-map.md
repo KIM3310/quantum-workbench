@@ -20,7 +20,7 @@ This repository is now curated as supporting material. Review it only after the 
 1. Start with the successor repositories named above.
 2. Use this repository only for optional domain breadth or historical product exploration.
 3. Check `docs/portfolio-fit.md` before presenting it externally.
-4. Keep the archived/supporting status visible in any resume, portfolio, or buyer conversation.
+4. Keep the archived/supporting status visible in any resume, portfolio, or reviewer conversation.
 
 ## Evidence
 
@@ -28,13 +28,13 @@ This repository is now curated as supporting material. Review it only after the 
 - Local simulator works
 - Managed backend is opt-in
 
-## Commercial Notes
+## Review Notes
 
 | Possible offer | Working scope assumption | Scope |
 |---|---|---|
-| Workshop artifact | Scope after buyer intake | Scoped after review. |
-| Experiment dashboard starter | Scope after buyer intake | Scoped after review. |
-| Research-support prototype | Scope after buyer intake | Scoped after review. |
+| Workshop artifact | Scope after reviewer intake | Scoped after review. |
+| Experiment dashboard starter | Scope after reviewer intake | Scoped after review. |
+| Research-support prototype | Scope after reviewer intake | Scoped after review. |
 
 ## Boundaries
 

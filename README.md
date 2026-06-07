@@ -20,8 +20,8 @@ A quantum experiment desk that shows research-tool discipline: local simulation 
 
 | Lens | Definition |
 |---|---|
-| Buyer or user | Research teams, students, technical reviewers, and cloud/quantum platform evaluators. |
-| Commercial route | Use as a technical workshop artifact, experiment dashboard starter, or research-support prototype. |
+| Audience | Research teams, students, technical reviewers, and cloud/quantum platform evaluators. |
+| Review path | Validate the demo, README, architecture notes, and quality gate before deeper workflow review. |
 | Review signal | Qiskit/Braket framing, local simulation, optional managed-backend adapters, and experiment review surfaces. |
 | Safety boundary | Managed backend use should be opt-in and budget-controlled; local simulation remains the safe default. |
 | Fast proof | Run the local simulation path and inspect generated experiment outputs and adapter boundaries. |
@@ -31,20 +31,16 @@ A quantum experiment desk that shows research-tool discipline: local simulation 
 - **First minute:** Generate one circuit, inspect the explanation, then compare the simulation output.
 - **Local demo:** Run the Quick Start commands and open `http://127.0.0.1:8000/`.
 - **Verification:** Run `pytest -v` and the architecture validation script if reviewing repository posture.
-- **Commercial read:** Treat it as an education/workshop surface, not a production quantum decision engine.
 
 ## Service Launch Playbook
 
-- [Service launch playbook](docs/service-launch-playbook.md) maps the repository to buyer segments, offer ladder, proof gates, proof gates, and risk boundaries.
+- [Service launch playbook](docs/service-launch-playbook.md) maps the repository to review audiences, offer ladder, proof gates, proof gates, and risk boundaries.
 
 ## Review Notes
 
 - [Review guide](docs/reviewer-evidence-map.md) summarizes the project angle, first files to inspect, verification commands, and known boundaries.
 - [Quality notes](docs/quality-gate.md) lists the local checks, CI surface, and release expectations for this repository.
-- [Service growth model](docs/service-growth-model.md) maps the project to an ethical service path, activation loop, scope logic, and growth experiments.
 - [Enterprise readiness notes](docs/enterprise-readiness.md) outlines security, data, operations, integration, and handoff expectations.
-- [Conversion UX model](docs/conversion-ux-model.md) maps the buyer path, behavioral design, UI/UX direction, scope frame, and ethical conversion guardrails.
-- [Commercial offer](docs/commercial-offer.md) packages the repository into a buyer-ready offer ladder, proof gate, outreach angle, and close path.
 - [Portfolio fit](docs/portfolio-fit.md) explains why this repository is archived/supporting and where the current portfolio front door lives.
 
 ## What it does
@@ -176,7 +172,7 @@ This repository includes a neutral cloud and AI engineering blueprint that maps 
 
 ## Enterprise Productization
 
-- [Product operating model](docs/product-operating-model.md) defines the buyer, paid wedge, trust boundary, operating checks, and service path for this repository.
+- [Product operating model](docs/product-operating-model.md) defines the reviewer, trust boundary, trust boundary, operating checks, and service path for this repository.
 
 ## Service Architecture
 

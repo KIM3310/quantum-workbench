@@ -22,7 +22,7 @@ A quantum experiment desk that shows research-tool discipline: local simulation 
 |---|---|
 | Audience | Research teams, students, technical reviewers, and cloud/quantum platform evaluators. |
 | Review path | Validate the demo, README, architecture notes, and quality gate before deeper workflow review. |
-| Review signal | Qiskit/Braket framing, local simulation, optional managed-backend adapters, and experiment review surfaces. |
+| Architecture signal | Qiskit/Braket framing, local simulation, optional managed-backend adapters, and experiment review surfaces. |
 | Safety boundary | Managed backend use should be opt-in and budget-controlled; local simulation remains the safe default. |
 | Fast proof | Run the local simulation path and inspect generated experiment outputs and adapter boundaries. |
 
@@ -173,6 +173,10 @@ This repository includes a neutral cloud and AI engineering blueprint that maps 
 ## Enterprise Productization
 
 - [Product operating model](docs/product-operating-model.md) defines the reviewer, trust boundary, trust boundary, operating checks, and service path for this repository.
+
+## System Architecture
+
+- [System architecture](docs/system-architecture.md) maps the runtime boundary, data/control flow, cloud or local deployment surface, and operating assumptions for this repository.
 
 ## Service Architecture
 

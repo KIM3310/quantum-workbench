@@ -11,7 +11,7 @@ That is exactly why it is useful for Qunova-style roles:
   - ideal local execution
   - Amazon Braket local execution
   - real IBM Quantum hardware execution
-- I can turn a technically complex subject into a reviewable backend product with:
+- I can turn a technically complex subject into a inspectable backend product with:
   - fixed experiments
   - backend selection
   - result storage

@@ -25,7 +25,7 @@ from app.quantum.runtime import (
     list_available_backends,
     list_runs,
     refresh_run,
-    review_pack,
+    architecture_pack,
     run_braket_local,
     run_local,
     runtime_brief,
@@ -143,7 +143,7 @@ def health() -> dict[str, Any]:
             "/api/experiments",
             "/api/backends",
             "/api/runs",
-            "/api/review-pack",
+            "/api/architecture-pack",
             "/api/error-metrics",
         ],
     }
@@ -266,10 +266,10 @@ def api_compare_local_backends(request: RunRequest) -> dict[str, Any]:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
 
 
-@app.get("/api/review-pack")
-def api_review_pack() -> dict[str, Any]:
+@app.get("/api/architecture-pack")
+def api_architecture_pack() -> dict[str, Any]:
     """Generate the experiment summary pack."""
-    return review_pack()
+    return architecture_pack()
 
 
 @app.get("/api/evidence/scorecard")

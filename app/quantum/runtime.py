@@ -537,7 +537,7 @@ def refresh_run(run_id: str) -> dict[str, Any] | None:
     return STORE.upsert_run(record)
 
 
-def review_pack() -> dict[str, Any]:
+def architecture_pack() -> dict[str, Any]:
     """Generate a experiment summary.
 
     Returns a structured summary including recent runs, evidence scorecard,

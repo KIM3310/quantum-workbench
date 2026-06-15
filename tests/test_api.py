@@ -30,7 +30,7 @@ from app.quantum.runtime import (
     _scorecard_entry,
     evidence_scorecard,
     ibm_usage_summary,
-    review_pack,
+    architecture_pack,
     runtime_brief,
 )
 from app.quantum.store import RunStore
@@ -243,8 +243,8 @@ class TestEvidenceGeneration:
         assert "completed_hardware_runs" in scorecard["summary"]
         assert "completed_local_runs" in scorecard["summary"]
 
-    def test_review_pack_structure(self) -> None:
-        pack = review_pack()
+    def test_architecture_pack_structure(self) -> None:
+        pack = architecture_pack()
         assert pack["service"] == "quantum-workbench"
         assert "why_it_matters" in pack
         assert "experiments" in pack
@@ -325,8 +325,8 @@ class TestAPIEndpoints:
         ids = {e["experiment_id"] for e in payload["experiments"]}
         assert {"bell_pair", "ghz_three", "qaoa_triangle", "h2_vqe_mini"} == ids
 
-    def test_api_review_pack(self) -> None:
-        response = client.get("/api/review-pack")
+    def test_api_architecture_pack(self) -> None:
+        response = client.get("/api/architecture-pack")
         assert response.status_code == 200
         payload = response.json()
         assert payload["service"] == "quantum-workbench"

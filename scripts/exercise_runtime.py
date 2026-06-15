@@ -16,7 +16,7 @@ def main() -> None:
         "/health",
         "/api/runtime/brief",
         "/api/experiments",
-        "/api/review-pack",
+        "/api/architecture-pack",
     ):
         response = client.get(path)
         response.raise_for_status()

@@ -3,7 +3,7 @@
 ## Live Demo
 
 - [Open the public GitHub Pages demo](https://kim3310.github.io/quantum-workbench/)
-- Scope: credential-free, synthetic-data demo for reviewers and evaluators.
+- Scope: credential-free, synthetic-data demo for technical readers and evaluators.
 
 > **Curated supporting repo**
 > This repository is kept as optional proof, but it no longer leads the portfolio.
@@ -14,31 +14,31 @@ A web-based experiment desk for running quantum circuits across local simulators
 
 ![Quantum Workbench home](docs/screenshots/quantum-workbench-home.png)
 
-## Product and Review Surface
+## Product and System Surface
 
 A quantum experiment desk that shows research-tool discipline: local simulation first, managed backends second.
 
 | Lens | Definition |
 |---|---|
-| Audience | Research teams, students, technical reviewers, and cloud/quantum platform evaluators. |
-| Review path | Validate the demo, README, architecture notes, and quality gate before deeper workflow review. |
-| Architecture signal | Qiskit/Braket framing, local simulation, optional managed-backend adapters, and experiment review surfaces. |
+| Audience | Research teams, students, technical operators, and cloud/quantum platform evaluators. |
+| Architecture path | Validate the demo, README, architecture notes, and quality gate before deeper workflow architecture. |
+| System signal | Qiskit/Braket framing, local simulation, optional managed-backend adapters, and experiment architecture surfaces. |
 | Safety boundary | Managed backend use should be opt-in and budget-controlled; local simulation remains the safe default. |
-| Fast proof | Run the local simulation path and inspect generated experiment outputs and adapter boundaries. |
+| Fast path | Run the local simulation path and inspect generated experiment outputs and adapter boundaries. |
 
-## Reviewer Fast Path
+## System Fast Path
 
 - **First minute:** Generate one circuit, inspect the explanation, then compare the simulation output.
 - **Local demo:** Run the Quick Start commands and open `http://127.0.0.1:8000/`.
-- **Verification:** Run `pytest -v` and the architecture validation script if reviewing repository posture.
+- **Verification:** Run `pytest -v` and the architecture validation script if architectureing repository posture.
 
 ## Service Launch Playbook
 
-- [Service launch playbook](docs/service-launch-playbook.md) maps the repository to review audiences, proof gates, operating boundaries, and risk controls.
+- [Service launch playbook](docs/service-launch-playbook.md) maps the repository to architecture audiences, operating gates, operating boundaries, and risk controls.
 
-## Review Notes
+## Architecture Notes
 
-- [Review guide](docs/reviewer-evidence-map.md) summarizes the project angle, first files to inspect, verification commands, and known boundaries.
+- [Architecture guide](docs/architecture-evidence-map.md) summarizes the project angle, first files to inspect, runtime commands, and known boundaries.
 - [Quality notes](docs/quality-gate.md) lists the local checks, CI surface, and release expectations for this repository.
 - [Enterprise readiness notes](docs/enterprise-readiness.md) outlines security, data, operations, integration, and handoff expectations.
 - [Portfolio fit](docs/portfolio-fit.md) explains why this repository is archived/supporting and where the current portfolio front door lives.
@@ -172,7 +172,7 @@ This repository includes a neutral cloud and AI engineering blueprint that maps 
 
 ## Enterprise Productization
 
-- [Product operating model](docs/product-operating-model.md) defines the reviewer, trust boundary, trust boundary, operating checks, and service path for this repository.
+- [Product operating model](docs/product-operating-model.md) defines the technical reader, trust boundary, trust boundary, operating checks, and service path for this repository.
 
 ## System Architecture
 

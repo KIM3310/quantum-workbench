@@ -5,7 +5,7 @@
   "repository_url": "https://github.com/KIM3310/quantum-workbench",
   "architecture_url": "https://github.com/KIM3310/quantum-workbench/blob/main/docs/system-architecture.md",
   "revenue_architecture_url": "https://github.com/KIM3310/quantum-workbench/blob/main/docs/revenue-architecture.md",
-  "lead_capture_url": "mailto:ehdjs1351@gmail.com?subject=Quantum%20Workbench%20private%20workspace&body=I%20am%20interested%20in%20paid%20lab%20workspace%2C%20course%20bundle%2C%20and%20provider-cost%20planning%20reports%20for%20Quantum%20Workbench.",
+  "lead_capture_url": "https://github.com/KIM3310/quantum-workbench/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+Quantum+Workbench",
   "productized_offer": "quantum experiment workbench with provider adapters, job inspection, and educational reports",
   "first_paid_sku": "paid lab workspace, course bundle, and provider-cost planning reports",
   "free_lead_magnet": "free simulator-first demo and static architecture page",

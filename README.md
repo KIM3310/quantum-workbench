@@ -181,3 +181,17 @@ This repository includes a neutral cloud and AI engineering blueprint that maps 
 ## Service Architecture
 
 - [Service architecture](docs/service-architecture.md) defines the cloud resources, account information, cost controls, and production guardrails needed to turn this repo into a scoped service without publishing public financial assumptions.
+
+<!-- search-growth-readme:start -->
+
+## Search And Service Surface
+
+- Public entry: free simulator-first demo and static architecture page
+- Paid boundary: paid lab workspace, course bundle, and provider-cost planning reports
+- Canonical URL: https://kim3310.github.io/quantum-workbench/
+- Lead capture: mailto:ehdjs1351@gmail.com?subject=Quantum%20Workbench%20private%20workspace&body=I%20am%20interested%20in%20paid%20lab%20workspace%2C%20course%20bundle%2C%20and%20provider-cost%20planning%20reports%20for%20Quantum%20Workbench.
+- Machine-readable offer: [docs/service-offer.json](docs/service-offer.json)
+- Search growth implementation: [docs/search-growth-implementation.md](docs/search-growth-implementation.md)
+- Revenue architecture: [docs/revenue-architecture.md](docs/revenue-architecture.md)
+
+<!-- search-growth-readme:end -->

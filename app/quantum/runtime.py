@@ -550,7 +550,7 @@ def architecture_pack() -> dict[str, Any]:
             "It shows foundational quantum circuits and a small optimization workflow in one product surface.",
             "It also includes a chemistry-style VQE mini workflow so the repo demonstrates a domain problem rather than only abstract circuits.",
             "It separates ideal local execution from real hardware execution instead of hiding backend differences.",
-            "It keeps run history, backend posture, local-stack comparisons, and experiment summaries reviewable through APIs and UI.",
+            "It keeps run history, backend posture, local-stack comparisons, and experiment summaries inspectable through APIs and UI.",
         ],
         "experiments": list_experiments(),
         "proof_sequence": [

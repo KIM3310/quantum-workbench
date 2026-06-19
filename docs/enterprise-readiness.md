@@ -18,7 +18,7 @@ This repository is archived as supporting material. It should not be positioned 
 ## Revival Requirements
 
 - Re-check dependencies, build path, secrets posture, and runtime walkthrough status.
-- Reconfirm the technical reader, data boundary, identity/access needs, monitoring, and support owner.
+- Reconfirm the architecture inspection, data boundary, identity/access needs, monitoring, and support owner.
 - Replace broad consumer or experimental positioning with one narrow inspectable use case.
 - Keep the active flagship repositories as the main portfolio story unless this domain is explicitly requested.
 

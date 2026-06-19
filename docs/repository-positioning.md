@@ -1,4 +1,4 @@
-# Portfolio Fit - Quantum Workbench
+# Repository Positioning - Quantum Workbench
 
 Updated: 2026-05-30
 
@@ -14,5 +14,5 @@ Updated: 2026-05-30
 ## Operating Rule
 
 - Keep this repository available, but do not lead with it.
-- Use it only when a technical reader asks for this exact domain, stack, or product pattern.
-- Do not treat it as a current portfolio pillar unless it is revived with fresh validation and a narrow architecture path.
+- Use it only when this exact domain, stack, or product pattern is relevant.
+- Do not lead with it unless it is revived with fresh operating data and a narrow architecture path.

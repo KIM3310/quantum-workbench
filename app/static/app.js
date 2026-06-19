@@ -178,7 +178,7 @@ function currentPayload(provider = "ibm") {
     ibm_options: {
       enable_twirling: false,
       enable_dynamical_decoupling: false,
-      job_tags: ["quantum-workbench", "review-surface"],
+      job_tags: ["quantum-workbench", "architecture-surface"],
     },
   };
 }

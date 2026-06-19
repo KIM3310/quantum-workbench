@@ -1,7 +1,7 @@
 [project]
 name = "quantum-workbench"
 version = "0.1.0"
-description = "Real-backend quantum workbench with IBM Quantum runtime support and reviewable experiment surfaces."
+description = "Real-backend quantum workbench with IBM Quantum runtime support and inspectable experiment surfaces."
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}

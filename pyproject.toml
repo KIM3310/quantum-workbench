@@ -5,7 +5,7 @@ description = "Real-backend quantum workbench with IBM Quantum runtime support a
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
-authors = [{name = "Doeon Kim", email = "ehdjs1351@gmail.com"}]
+authors = [{name = "Doeon Kim"}]
 keywords = ["quantum-computing", "qiskit", "amazon-braket", "ibm-quantum"]
 dependencies = [
   "amazon-braket-sdk>=1.81,<2",

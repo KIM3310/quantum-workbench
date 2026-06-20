@@ -62,7 +62,7 @@ A quantum experiment desk that shows research-tool discipline: local simulation 
 
 ## Real hardware results
 
-Verified on `ibm_torino` (2026-03-17):
+Hardware run on `ibm_torino` (2026-03-17):
 - `bell_pair`: entanglement signal 0.8984 (115/128 correlated outcomes)
 - `ghz_three`: GHZ signal 0.8438 (108/128)
 - `qaoa_triangle`: avg cut score 1.2344, close to local baseline with visible device noise

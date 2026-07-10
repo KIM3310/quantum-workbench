@@ -2,7 +2,7 @@
 
 Updated: 2026-05-30
 
-This repository is now curated as supporting material. Architecture it only after the flagship enterprise AI, operations, security, data, and runtime reliability projects have established the main story.
+This repository is now curated as supporting material. Review it only after the flagship enterprise AI, operations, security, data, and runtime reliability projects have established the main story.
 
 ## Summary
 
@@ -32,9 +32,9 @@ This repository is now curated as supporting material. Architecture it only afte
 
 | Possible offer | Working scope assumption | Scope |
 |---|---|---|
-| Workshop artifact | Scope after product intake | Scoped after architecture. |
-| Experiment dashboard starter | Scope after product intake | Scoped after architecture. |
-| Research-support prototype | Scope after product intake | Scoped after architecture. |
+| Workshop artifact | Scope after stakeholder intake | Scoped after review. |
+| Experiment dashboard starter | Scope after stakeholder intake | Scoped after review. |
+| Research-support prototype | Scope after stakeholder intake | Scoped after review. |
 
 ## Boundaries
 

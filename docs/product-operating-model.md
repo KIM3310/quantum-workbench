@@ -3,10 +3,10 @@
 ## Public Demo
 
 - URL: https://kim3310.github.io/quantum-workbench/
-- Scope: credential-free synthetic demo surface for quick architecture inspection inspection.
+- Scope: credential-free synthetic demo surface for quick technical review.
 
 Repository: `quantum-workbench`
-Last updated: 2026-06-03 KST
+Last reviewed: 2026-06-03 KST
 
 ## Enterprise Product Position
 

@@ -25,7 +25,7 @@ async function fetchJson(path, options = {}) {
 function renderRuntime(brief) {
   runtimeCard.innerHTML = `
     <p class="eyebrow">Runtime posture</p>
-    <h2>${brief.mode === "hardware-ready" ? "Hardware-ready" : "Local architecture mode"}</h2>
+    <h2>${brief.mode === "hardware-ready" ? "Hardware-ready" : "Local review mode"}</h2>
     <p>${brief.summary}</p>
     <ul class="meta-list">
       <li><strong>IBM token:</strong> ${brief.hardware_support.ibm_quantum.token_configured ? "yes" : "no"}</li>

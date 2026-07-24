@@ -24,6 +24,7 @@ install: $(VENV_STAMP)
 
 lint: install
 	$(VENV_PYTHON) -m ruff check app tests scripts
+	$(VENV_PYTHON) -m ruff format --check app tests scripts
 
 test: install
 	$(VENV_PYTHON) -m pytest -q

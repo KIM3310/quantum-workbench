@@ -94,5 +94,6 @@ class RunStore:
             decoder = json.JSONDecoder()
             data, _ = decoder.raw_decode(text)
         if not isinstance(data, list):
-            raise ValueError("run store must contain a list")
+            # Valid JSON can still violate the run-store value schema.
+            raise ValueError("run store must contain a list")  # noqa: TRY004
         return data

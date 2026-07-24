@@ -28,13 +28,12 @@ from app.quantum.runtime import (
     _comparison_summary,
     _safe_queue_depth,
     _scorecard_entry,
+    architecture_pack,
     evidence_scorecard,
     ibm_usage_summary,
-    architecture_pack,
     runtime_brief,
 )
 from app.quantum.store import RunStore
-
 
 client = TestClient(app)
 
@@ -48,7 +47,7 @@ class TestCircuitConstruction:
     """Validate that each experiment builds valid Qiskit and Braket circuits."""
 
     def test_bell_pair_circuit_has_correct_shape(self) -> None:
-        circuit, definition = build_experiment("bell_pair")
+        circuit, _ = build_experiment("bell_pair")
         assert circuit.num_qubits == 2
         assert circuit.num_clbits == 2
         ops = circuit.count_ops()
@@ -57,7 +56,7 @@ class TestCircuitConstruction:
         assert ops.get("measure", 0) == 2
 
     def test_ghz_three_circuit_depth_and_gates(self) -> None:
-        circuit, definition = build_experiment("ghz_three")
+        circuit, _ = build_experiment("ghz_three")
         assert circuit.num_qubits == 3
         assert circuit.count_ops().get("cx", 0) == 2
 
@@ -74,7 +73,7 @@ class TestCircuitConstruction:
             build_experiment("nonexistent_experiment")
 
     def test_braket_bell_pair_builds_successfully(self) -> None:
-        circuit, definition = build_braket_experiment("bell_pair")
+        circuit, _ = build_braket_experiment("bell_pair")
         assert circuit.qubit_count == 2
 
     def test_braket_unknown_experiment_raises_key_error(self) -> None:

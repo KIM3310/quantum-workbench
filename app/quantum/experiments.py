@@ -12,10 +12,10 @@ from dataclasses import dataclass
 from math import isfinite, pi
 from typing import Any
 
-from braket.circuits import Circuit as BraketCircuit
-from qiskit.circuit import Parameter
-from qiskit import QuantumCircuit
 import numpy as np
+from braket.circuits import Circuit as BraketCircuit
+from qiskit import QuantumCircuit
+from qiskit.circuit import Parameter
 from qiskit.quantum_info import SparsePauliOp, Statevector
 
 logger = logging.getLogger("quantum_workbench.experiments")
@@ -494,8 +494,7 @@ def evaluate_h2_theta(theta: float) -> dict[str, float]:
 
 def h2_theta_sweep(samples: int = 21) -> dict[str, Any]:
     """Sweep theta across [-pi, pi] and return energies with the best variational angle."""
-    if samples < 3:
-        samples = 3
+    samples = max(samples, 3)
     thetas = [(-pi + (2 * pi * idx / (samples - 1))) for idx in range(samples)]
     evaluations = [evaluate_h2_theta(theta) for theta in thetas]
     best = min(evaluations, key=lambda item: item["energy"])

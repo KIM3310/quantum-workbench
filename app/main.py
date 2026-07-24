@@ -7,10 +7,10 @@ scorecards, and backend posture reporting.
 
 from __future__ import annotations
 
-import logging
-import sys
-import os
 import hmac
+import logging
+import os
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -20,21 +20,20 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from app.quantum.runtime import (
+    architecture_pack,
     compare_local_backends,
+    evidence_scorecard,
     get_error_metrics,
+    h2_vqe_pack,
     list_available_backends,
     list_runs,
     refresh_run,
-    architecture_pack,
     run_braket_local,
     run_local,
     runtime_brief,
     submit_braket_hardware,
     submit_hardware,
-    evidence_scorecard,
-    h2_vqe_pack,
 )
-
 
 # ---------------------------------------------------------------------------
 # Structured logging configuration

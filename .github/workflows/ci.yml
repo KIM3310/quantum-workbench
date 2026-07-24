@@ -18,11 +18,11 @@ jobs:
         with:
           python-version: "3.11"
       - name: Install ruff
-        run: pip install ruff
+        run: pip install ruff==0.16.0
       - name: Run ruff linter
-        run: ruff check app/ tests/
+        run: ruff check app/ tests/ scripts/
       - name: Run ruff formatter check
-        run: ruff format --check app/ tests/
+        run: ruff format --check app/ tests/ scripts/
 
   test:
     runs-on: ubuntu-latest

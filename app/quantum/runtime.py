@@ -10,7 +10,7 @@ import logging
 import os
 import time
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 from uuid import uuid4
@@ -34,7 +34,6 @@ from .experiments import (
     validate_circuit,
 )
 from .store import RunStore
-
 
 logger = logging.getLogger("quantum_workbench.runtime")
 
@@ -65,7 +64,7 @@ class _ErrorMetrics:
             "category": category,
             "error_type": type(error).__name__,
             "message": str(error),
-            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "timestamp": datetime.now(UTC).isoformat(),
         }
         if context:
             entry["context"] = context
@@ -1250,4 +1249,4 @@ def _base_record(
 
 def _utc_now() -> str:
     """Return the current UTC time as an ISO 8601 string."""
-    return datetime.now(timezone.utc).isoformat()
+    return datetime.now(UTC).isoformat()

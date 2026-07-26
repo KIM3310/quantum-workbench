@@ -188,6 +188,7 @@ quantum-workbench/
 - Paid boundary: paid lab workspace, course bundle, and provider-cost planning reports
 - Canonical URL: https://kim3310.github.io/quantum-workbench/
 - Lead capture: https://github.com/KIM3310/quantum-workbench/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+Quantum+Workbench
+- Commercial route: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench#service-offers
 - Machine-readable offer: [docs/service-offer.json](docs/service-offer.json)
 - Search growth implementation: [docs/search-growth-implementation.md](docs/search-growth-implementation.md)
 - Revenue architecture: [docs/revenue-architecture.md](docs/revenue-architecture.md)

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Guide | Quantum Workbench</title>
+  <meta name="description" content="Free quantum-learning lab note for explaining circuits, measurement, and experiments. Source-backed guide for technical learners and education-content…">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="google-adsense-account" content="ca-pub-4973160293737562">
+  <link rel="canonical" href="https://quantum-workbench.pages.dev/guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Project Guide | Quantum Workbench">
+  <meta property="og:description" content="Free quantum-learning lab note for explaining circuits, measurement, and experiments. Source-backed guide for technical learners and education-content builders.">
+  <meta property="og:url" content="https://quantum-workbench.pages.dev/guide.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Project Guide | Quantum Workbench","description":"Free quantum-learning lab note for explaining circuits, measurement, and experiments. Source-backed guide for technical learners and education-content builders.","url":"https://quantum-workbench.pages.dev/guide.html","dateModified":"2026-07-28","author":{"@type":"Person","name":"KIM3310","url":"https://github.com/KIM3310"},"publisher":{"@type":"Person","name":"KIM3310","url":"https://kim3310-doeon-kim-portfolio.pages.dev"},"isAccessibleForFree":true}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4973160293737562" crossorigin="anonymous"></script>
+  <style>
+    :root { color-scheme: light; --ink: #17201f; --muted: #52605d; --line: #cbd2ce; --paper: #ffffff; --ground: #f5f6f4; --green: #126455; --coral: #c94732; --gold: #b67a00; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--ground); color: var(--ink); font: 17px/1.72 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color: var(--green); text-underline-offset: 3px; }
+    .site-header { border-bottom: 1px solid var(--line); background: rgba(245, 246, 244, .97); }
+    .site-nav, .article-shell, .site-footer-inner { width: min(920px, calc(100% - 32px)); margin: 0 auto; }
+    .site-nav { min-height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .site-nav strong { font-size: .92rem; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 14px; font-size: .84rem; }
+    .article-shell { padding: 54px 0 72px; }
+    .breadcrumbs { color: var(--muted); font-size: .82rem; }
+    .article-intro { padding: 28px 0 36px; border-bottom: 2px solid var(--ink); }
+    .kicker { color: var(--coral); font-size: .76rem; font-weight: 800; text-transform: uppercase; }
+    h1 { margin: 10px 0 16px; max-width: 18ch; font-size: 3.5rem; line-height: 1.04; letter-spacing: 0; overflow-wrap: anywhere; }
+    .lede { max-width: 68ch; color: var(--muted); font-size: 1.08rem; }
+    .review-note { margin-top: 18px; color: var(--muted); font-size: .84rem; }
+    article { padding-top: 24px; }
+    article h2 { margin: 42px 0 12px; padding-top: 6px; font-size: 1.75rem; line-height: 1.2; letter-spacing: 0; }
+    article h3 { margin: 30px 0 8px; font-size: 1.2rem; letter-spacing: 0; }
+    article h4 { margin: 24px 0 6px; font-size: 1.02rem; letter-spacing: 0; }
+    article p, article li { max-width: 76ch; }
+    article li + li { margin-top: 6px; }
+    pre { max-width: 100%; overflow: auto; border-left: 4px solid var(--gold); background: #1d2423; color: #f6f8f7; padding: 18px; border-radius: 4px; font-size: .86rem; }
+    code { overflow-wrap: anywhere; }
+    :not(pre) > code { border: 1px solid var(--line); background: var(--paper); padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+    .table-scroll { overflow-x: auto; margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; background: var(--paper); font-size: .9rem; }
+    th, td { border: 1px solid var(--line); padding: 10px; text-align: left; vertical-align: top; }
+    th { background: #e9eeeb; }
+    .boundary-note { margin: 30px 0 4px; border-left: 4px solid var(--coral); background: var(--paper); padding: 18px; }
+    .source-basis { margin-top: 48px; border-top: 1px solid var(--line); padding-top: 22px; color: var(--muted); }
+    .site-footer { border-top: 1px solid var(--line); background: var(--paper); }
+    .site-footer-inner { padding: 28px 0 44px; color: var(--muted); font-size: .84rem; }
+    .site-footer-links { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 12px; }
+    @media (max-width: 720px) {
+      .site-nav { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+      .article-shell { padding-top: 32px; }
+      h1 { font-size: 2.35rem; }
+    }
+  </style>
+</head>
+<body data-ad-surface="editorial">
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary">
+      <strong>Quantum Workbench</strong>
+      <div class="nav-links"><a href="/">Home</a><a href="/guide.html">Project guide</a><a href="/architecture.html">Architecture</a><a href="/verification.html">Verification</a><a href="/publisher.html">Publisher</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+    </nav>
+  </header>
+  <main class="article-shell">
+    <p class="breadcrumbs"><a href="/">Home</a> / Project guide</p>
+    <header class="article-intro">
+      <div class="kicker">Project guide</div>
+      <h1>Project Guide | Quantum Workbench</h1>
+      <p class="lede">Free quantum-learning lab note for explaining circuits, measurement, and experiments. This guide organizes the repository&#039;s original implementation notes for technical learners and education-content builders.</p>
+      <p class="review-note">Reviewed 2026-07-28. This page is derived from checked-in repository evidence and links back to its source.</p>
+    </header>
+
+    <article><h3>Live Demo</h3>
+<ul><li><a href="https://quantum-workbench.pages.dev/" rel="noopener">Open the public GitHub Pages demo</a></li><li>Scope: credential-free, synthetic-data demo for technical review paths and evaluators.</li></ul>
+<p><strong>Curated supporting repo</strong> This repository is kept as optional proof, but it no longer leads the portfolio. Current front door: <strong>agent-orchestration-benchmark, tool-call-finetune-lab, and stage-pilot</strong>. Reason: Broad education/research tooling is less targeted than the current AI platform, governance, and ops lanes.</p>
+<p>A web-based experiment desk for running quantum circuits across local simulators, Amazon Braket, and IBM Quantum hardware, then comparing results side by side.</p>
+<h3>System Overview</h3>
+<p>A quantum experiment desk that shows research-tool discipline: local simulation first, managed backends second.</p>
+<div class="table-scroll"><table><thead><tr><th>Area</th><th>Details</th></tr></thead><tbody><tr><td>Users</td><td>Research teams, students, technical reviewers, and cloud/quantum platform evaluators.</td></tr><tr><td>Technical path</td><td>Validate the demo, README, architecture notes, and quality gate before deeper workflow review.</td></tr><tr><td>System scope</td><td>Qiskit/Braket framing, local simulation, optional managed-backend adapters, and experiment review surfaces.</td></tr><tr><td>Operating boundary</td><td>Managed backend use should be opt-in and budget-controlled; local simulation remains the safe default.</td></tr><tr><td>Evaluation path</td><td>Run the local simulation path and inspect generated experiment outputs and adapter boundaries.</td></tr></tbody></table></div>
+<h3>Evaluation Path</h3>
+<ul><li><strong>Start here:</strong> Generate one circuit, inspect the explanation, then compare the simulation output.</li><li><strong>Local demo:</strong> Run the Quick Start commands and open <code>http://127.0.0.1:8000/</code>.</li><li><strong>Checks:</strong> Run <code>pytest -v</code> and the architecture validation script when reviewing repository posture.</li></ul>
+<h3>Architecture Notes</h3>
+<ul><li><a href="https://github.com/KIM3310/quantum-workbench/blob/main/docs/architecture-evidence-map.md" rel="noopener">Architecture guide</a> summarizes the system scope, first files to inspect, runtime commands, and known boundaries.</li><li><a href="https://github.com/KIM3310/quantum-workbench/blob/main/docs/quality-gate.md" rel="noopener">Quality notes</a> lists the local checks, CI surface, and release expectations for this repository.</li><li><a href="https://github.com/KIM3310/quantum-workbench/blob/main/docs/enterprise-readiness.md" rel="noopener">Enterprise readiness notes</a> outlines security, data, operations, integration, and handoff expectations.</li><li><a href="https://github.com/KIM3310/quantum-workbench/blob/main/docs/repository-positioning.md" rel="noopener">Repository positioning</a> explains why this repository is archived/supporting and where the current technical entry points live.</li></ul>
+<h3>What it does</h3>
+<ul><li>Pick from built-in experiments (Bell pair, GHZ, QAOA, H2 VQE)</li><li>Run locally on Qiskit&#039;s ideal sampler or Braket&#039;s local simulator</li><li>When credentials and an operator token are configured, submit the same circuit to IBM Quantum or Braket hardware</li><li>Compare counts, noise, and backend metadata across runs</li><li>Persist run history through a simple API and lightweight UI</li></ul>
+<h3>Experiments</h3>
+<div class="table-scroll"><table><thead><tr><th>Experiment</th><th>Description</th></tr></thead><tbody><tr><td><code>bell_pair</code></td><td>2-qubit Bell state - shows entanglement and hardware noise</td></tr><tr><td><code>ghz_three</code></td><td>3-qubit GHZ state - shows multi-qubit coherence</td></tr><tr><td><code>qaoa_triangle</code></td><td>Single-layer QAOA Max-Cut on a triangle graph</td></tr><tr><td><code>h2_vqe_mini</code></td><td>Small H2 Hamiltonian with exact baseline and parameter sweep</td></tr></tbody></table></div>
+<h3>Real hardware evidence</h3>
+<p>Historical hardware run on <code>ibm_torino</code> (2026-03-17). This is evidence of adapter behavior, not a public hardware-access guarantee:</p>
+<ul><li><code>bell_pair</code>: entanglement signal 0.8984 (115/128 correlated outcomes)</li><li><code>ghz_three</code>: GHZ signal 0.8438 (108/128)</li><li><code>qaoa_triangle</code>: avg cut score 1.2344, close to local baseline with visible device noise</li></ul>
+<h3>Quick Start</h3>
+<pre><code>python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -U pip
+python -m pip install -e &quot;.[dev]&quot;
+uvicorn app.main:app --reload</code></pre>
+<p>Open <code>http://127.0.0.1:8000/</code></p>
+<h4>IBM Quantum (optional)</h4>
+<pre><code>export IBM_QUANTUM_TOKEN=&quot;&lt;your_token&gt;&quot;
+export QUANTUM_OPERATOR_TOKEN=&quot;&lt;operator-token-for-hardware-routes&gt;&quot;</code></pre>
+<h4>Amazon Braket (optional)</h4>
+<pre><code>export AWS_PROFILE=&quot;&lt;your_profile&gt;&quot;
+export AWS_DEFAULT_REGION=&quot;us-west-1&quot;</code></pre>
+<p>If credentials aren&#039;t set, hardware routes are blocked and local simulation still works. If provider credentials exist but <code>QUANTUM_OPERATOR_TOKEN</code> is missing, hardware routes still fail closed.</p>
+<h3>API</h3>
+<div class="table-scroll"><table><thead><tr><th>Endpoint</th><th>Description</th></tr></thead><tbody><tr><td><code>GET /health</code></td><td>Runtime status</td></tr><tr><td><code>GET /api/experiments</code></td><td>Experiment catalog</td></tr><tr><td><code>GET /api/backends</code></td><td>Available hardware backends</td></tr><tr><td><code>GET /api/runs</code></td><td>Run history</td></tr><tr><td><code>POST /api/runs/local</code></td><td>Run on ideal local sampler</td></tr><tr><td><code>POST /api/runs/braket-local</code></td><td>Run on Braket local simulator</td></tr><tr><td><code>POST /api/compare/local-backends</code></td><td>Compare both local stacks</td></tr><tr><td><code>POST /api/runs/hardware</code></td><td>Operator-token guarded IBM hardware submission</td></tr><tr><td><code>POST /api/runs/braket-hardware</code></td><td>Operator-token guarded Braket hardware submission</td></tr><tr><td><code>GET /api/evidence/scorecard</code></td><td>Latest run summary</td></tr><tr><td><code>GET /api/ibm/proof-pack</code></td><td>Operator-token guarded IBM backend results and metadata</td></tr></tbody></table></div>
+<h3>Architecture</h3>
+<pre><code>+------------------+       +------------------+       +-------------------+
+|   Browser / UI   | ----&gt; |   FastAPI App    | ----&gt; |  Quantum Runtime  |
+|  (static files)  |       |   (main.py)      |       |   (runtime.py)    |
++------------------+       +------------------+       +-------------------+
+                                   |                         |
+                                   v                         v
+                           +---------------+     +-----------------------+
+                           |  RunStore     |     |   Experiments         |
+                           | (store.py)    |     |   (experiments.py)    |
+                           | JSON persist  |     |   Circuit builders    |
+                           +---------------+     +-----------------------+
+                                                         |
+                                        +----------------+----------------+
+                                        v                v                v
+                                 +-----------+   +-----------+   +-----------+
+                                 |  Qiskit   |   |  Braket   |   |  IBM /    |
+                                 |  Local    |   |  Local    |   |  Braket   |
+                                 | Simulator |   | Simulator |   | Hardware  |
+                                 +-----------+   +-----------+   +-----------+</code></pre>
+<h3>Tests</h3>
+<p>58 tests covering circuit construction, backend selection, result parsing, API contracts, chemistry workflow, and store persistence.</p>
+<pre><code>pytest -v</code></pre>
+<h3>Project structure</h3>
+<pre><code>quantum-workbench/
+  app/
+    main.py
+    quantum/
+      experiments.py
+      runtime.py
+      store.py
+    static/
+      index.html, app.js, style.css
+  docs/
+  scripts/
+  tests/</code></pre>
+<h3>References</h3>
+<ul><li><a href="https://docs.quantum.ibm.com" rel="noopener">IBM Quantum Docs</a></li><li><a href="https://docs.aws.amazon.com/braket/" rel="noopener">Amazon Braket Docs</a></li></ul>
+<h3>Cloud + AI Architecture</h3>
+<ul><li><a href="https://github.com/KIM3310/quantum-workbench/blob/main/docs/cloud-ai-architecture.md" rel="noopener">Cloud + AI architecture blueprint</a></li><li><a href="https://github.com/KIM3310/quantum-workbench/blob/main/docs/architecture/blueprint.json" rel="noopener">Machine-readable architecture manifest</a></li><li>Validation command: <code>python3 scripts/validate_architecture_blueprint.py</code></li></ul>
+<h3>Enterprise Productization</h3>
+<ul><li><a href="https://github.com/KIM3310/quantum-workbench/blob/main/docs/product-operating-model.md" rel="noopener">Product operating model</a> defines the product scope, trust boundary, operating checks, and service path for this repository.</li></ul>
+<h3>System Architecture</h3>
+<ul><li><a href="https://github.com/KIM3310/quantum-workbench/blob/main/docs/system-architecture.md" rel="noopener">System architecture</a> maps the runtime boundary, data/control flow, cloud or local deployment surface, and operating assumptions for this repository.</li></ul>
+<h3>Service Architecture</h3>
+<ul><li><a href="https://github.com/KIM3310/quantum-workbench/blob/main/docs/service-architecture.md" rel="noopener">Service architecture</a> defines the cloud resources, account information, cost controls, and production guardrails needed to turn this repo into a scoped service without publishing public financial assumptions.</li></ul>
+<h3>Search And Service Surface</h3>
+<ul><li>Public entry: free simulator-first demo and static architecture page</li><li>Paid boundary: private prototype customization for simulator-first lab workspaces, course bundles, and provider-cost planning reports</li><li>Canonical URL: https://quantum-workbench.pages.dev/</li><li>Lead capture: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench&amp;inquiry=consumer-prototype-customization#private-inquiry</li><li>Resource route: https://kim3310-doeon-kim-portfolio.pages.dev/resources/quantum-workbench/</li><li>Commercial route: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench#service-offers</li><li>Machine-readable offer: <a href="https://github.com/KIM3310/quantum-workbench/blob/main/docs/service-offer.json" rel="noopener">docs/service-offer.json</a></li><li>Search growth implementation: <a href="https://github.com/KIM3310/quantum-workbench/blob/main/docs/search-growth-implementation.md" rel="noopener">docs/search-growth-implementation.md</a></li><li>Revenue architecture: <a href="https://github.com/KIM3310/quantum-workbench/blob/main/docs/revenue-architecture.md" rel="noopener">docs/revenue-architecture.md</a></li><li>Claim boundary: public pages use synthetic/local demo data; managed hardware paths require customer/operator credentials and do not imply public hardware access or revenue.</li></ul></article>
+    <aside class="source-basis">
+      <strong>Source basis:</strong> <a href="https://github.com/KIM3310/quantum-workbench/blob/main/README.md" rel="noopener">README.md</a>. Corrections can be proposed through the public repository without submitting private data.
+    </aside>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="site-footer-links"><a href="/">Home</a><a href="/guide.html">Project guide</a><a href="/architecture.html">Architecture</a><a href="/verification.html">Verification</a><a href="/publisher.html">Publisher</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="https://kim3310-doeon-kim-portfolio.pages.dev/">Resource atlas</a></div>
+      <p>Advertising may appear on this public editorial page after Google approves the site. Ads are not placed inside private, transactional, diagnostic, security-response, or operational workflows.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -13,8 +13,8 @@ Commercial route: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-w
 
 Use this project as a runnable or inspectable reference for Quantum Workbench demo, Quantum Workbench system architecture, Quantum Workbench educational tool, quantum experiment workbench with provider adapters, job inspection, and educational reports service. Public claims are simulator-first; IBM Quantum and Braket hardware routes require provider credentials plus an operator token.
 # ADSENSE-PUBLICATION:START
-Editorial guide: https://quantum-workbench.pages.dev/guide.html
-Architecture article: https://quantum-workbench.pages.dev/architecture.html
-Verification article: https://quantum-workbench.pages.dev/verification.html
-Publisher information: https://quantum-workbench.pages.dev/publisher.html
+Editorial guide: https://quantum-workbench.pages.dev/guide
+Architecture article: https://quantum-workbench.pages.dev/architecture
+Verification article: https://quantum-workbench.pages.dev/verification
+Publisher information: https://quantum-workbench.pages.dev/publisher
 # ADSENSE-PUBLICATION:END

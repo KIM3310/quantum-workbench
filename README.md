@@ -47,7 +47,7 @@ A quantum experiment desk that shows research-tool discipline: local simulation 
 
 - Pick from built-in experiments (Bell pair, GHZ, QAOA, H2 VQE)
 - Run locally on Qiskit's ideal sampler or Braket's local simulator
-- Submit the same circuit to real IBM Quantum or Braket hardware
+- When credentials and an operator token are configured, submit the same circuit to IBM Quantum or Braket hardware
 - Compare counts, noise, and backend metadata across runs
 - Persist run history through a simple API and lightweight UI
 
@@ -60,9 +60,9 @@ A quantum experiment desk that shows research-tool discipline: local simulation 
 | `qaoa_triangle` | Single-layer QAOA Max-Cut on a triangle graph |
 | `h2_vqe_mini` | Small H2 Hamiltonian with exact baseline and parameter sweep |
 
-## Real hardware results
+## Real hardware evidence
 
-Hardware run on `ibm_torino` (2026-03-17):
+Historical hardware run on `ibm_torino` (2026-03-17). This is evidence of adapter behavior, not a public hardware-access guarantee:
 - `bell_pair`: entanglement signal 0.8984 (115/128 correlated outcomes)
 - `ghz_three`: GHZ signal 0.8438 (108/128)
 - `qaoa_triangle`: avg cut score 1.2344, close to local baseline with visible device noise
@@ -82,6 +82,7 @@ Open `http://127.0.0.1:8000/`
 ### IBM Quantum (optional)
 ```bash
 export IBM_QUANTUM_TOKEN="<your_token>"
+export QUANTUM_OPERATOR_TOKEN="<operator-token-for-hardware-routes>"
 ```
 
 ### Amazon Braket (optional)
@@ -90,7 +91,7 @@ export AWS_PROFILE="<your_profile>"
 export AWS_DEFAULT_REGION="us-west-1"
 ```
 
-If credentials aren't set, hardware routes are blocked and local simulation still works.
+If credentials aren't set, hardware routes are blocked and local simulation still works. If provider credentials exist but `QUANTUM_OPERATOR_TOKEN` is missing, hardware routes still fail closed.
 
 ## API
 
@@ -103,10 +104,10 @@ If credentials aren't set, hardware routes are blocked and local simulation stil
 | `POST /api/runs/local` | Run on ideal local sampler |
 | `POST /api/runs/braket-local` | Run on Braket local simulator |
 | `POST /api/compare/local-backends` | Compare both local stacks |
-| `POST /api/runs/hardware` | Submit to IBM hardware |
-| `POST /api/runs/braket-hardware` | Submit to Braket hardware |
+| `POST /api/runs/hardware` | Operator-token guarded IBM hardware submission |
+| `POST /api/runs/braket-hardware` | Operator-token guarded Braket hardware submission |
 | `GET /api/evidence/scorecard` | Latest run summary |
-| `GET /api/ibm/proof-pack` | IBM backend results and metadata |
+| `GET /api/ibm/proof-pack` | Operator-token guarded IBM backend results and metadata |
 
 ## Architecture
 
@@ -185,12 +186,13 @@ quantum-workbench/
 ## Search And Service Surface
 
 - Public entry: free simulator-first demo and static architecture page
-- Paid boundary: paid lab workspace, course bundle, and provider-cost planning reports
+- Paid boundary: private prototype customization for simulator-first lab workspaces, course bundles, and provider-cost planning reports
 - Canonical URL: https://kim3310.github.io/quantum-workbench/
-- Lead capture: https://github.com/KIM3310/quantum-workbench/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+Quantum+Workbench
+- Lead capture: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench&inquiry=consumer-prototype-customization#private-inquiry
 - Commercial route: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench#service-offers
 - Machine-readable offer: [docs/service-offer.json](docs/service-offer.json)
 - Search growth implementation: [docs/search-growth-implementation.md](docs/search-growth-implementation.md)
 - Revenue architecture: [docs/revenue-architecture.md](docs/revenue-architecture.md)
+- Claim boundary: public pages use synthetic/local demo data; managed hardware paths require customer/operator credentials and do not imply public hardware access or revenue.
 
 <!-- search-growth-readme:end -->

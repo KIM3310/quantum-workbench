@@ -93,7 +93,13 @@ def _read_presented_token(request: Request) -> str:
 def require_hardware_operator_token(request: Request) -> None:
     expected = _hardware_operator_token()
     if not expected:
-        return
+        raise HTTPException(
+            status_code=503,
+            detail=(
+                "hardware routes are disabled until "
+                "QUANTUM_OPERATOR_TOKEN is configured"
+            ),
+        )
     presented = _read_presented_token(request)
     if presented and hmac.compare_digest(presented, expected):
         return

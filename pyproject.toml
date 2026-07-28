@@ -21,10 +21,11 @@ dev = [
   "httpx>=0.28,<1",
   "pytest>=9.0.3,<10",
   "ruff==0.16.0",
+  "setuptools>=83",
 ]
 
 [build-system]
-requires = ["setuptools>=68", "wheel"]
+requires = ["setuptools>=83", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]

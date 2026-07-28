@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import math
 from pathlib import Path
 from typing import Any
@@ -36,6 +37,11 @@ from app.quantum.runtime import (
 from app.quantum.store import RunStore
 
 client = TestClient(app)
+ROOT = Path(__file__).resolve().parents[1]
+PRIVATE_INQUIRY_URL = (
+    "https://kim3310-doeon-kim-portfolio.pages.dev/"
+    "?offer=quantum-workbench&inquiry=consumer-prototype-customization#private-inquiry"
+)
 
 
 # ---------------------------------------------------------------------------
@@ -114,6 +120,33 @@ class TestCircuitConstruction:
         result = validate_circuit(circuit, definition)
         assert result["valid"] is False
         assert "measurement" in result["reason"]
+
+
+class TestPublicServiceSurface:
+    """Keep public monetization and hardware-access claims conservative."""
+
+    def test_service_offer_uses_private_inquiry_lane_without_checkout(self) -> None:
+        offer = json.loads((ROOT / "docs" / "service-offer.json").read_text())
+        site_offer = json.loads((ROOT / "site" / "service-offer.json").read_text())
+
+        assert offer == site_offer
+        assert offer["lead_capture_url"] == PRIVATE_INQUIRY_URL
+        assert offer["commerce"]["lane_id"] == "consumer-prototype-customization"
+        assert offer["commerce"]["checkout"]["provider"] is None
+        assert offer["commerce"]["checkout"]["status"] == "not-configured"
+        assert offer["commerce"]["checkout"]["fallback_url"] == PRIVATE_INQUIRY_URL
+        assert "private prototype customization" in offer["first_paid_sku"]
+        assert "operator token" in offer["structured_data"]["description"]
+        assert offer["structured_data"]["offers"][1]["url"] == PRIVATE_INQUIRY_URL
+
+    def test_public_html_does_not_overclaim_hardware_or_live_checkout(self) -> None:
+        html = (ROOT / "site" / "index.html").read_text()
+
+        assert PRIVATE_INQUIRY_URL in html
+        assert "Request customization" in html
+        assert "Hardware routes are credentialed and operator-gated" in html
+        assert "Paid path: paid lab workspace" not in html
+        assert "View paid options" not in html
 
     def test_list_experiments_returns_all_registered(self) -> None:
         experiments = list_experiments()
@@ -377,13 +410,17 @@ class TestAPIEndpoints:
         )
         assert response.status_code == 422  # Pydantic validation: ge=128
 
-    def test_hardware_requires_token(self) -> None:
+    def test_hardware_route_fails_closed_without_operator_token_config(
+        self, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        monkeypatch.setenv("IBM_QUANTUM_TOKEN", "real-ish-token")
+        monkeypatch.delenv("QUANTUM_OPERATOR_TOKEN", raising=False)
         response = client.post(
             "/api/runs/hardware",
             json={"experiment_id": "bell_pair", "shots": 512, "parameters": {}},
         )
         assert response.status_code == 503
-        assert "IBM_QUANTUM_TOKEN" in response.json()["detail"]
+        assert "QUANTUM_OPERATOR_TOKEN" in response.json()["detail"]
 
     def test_hardware_route_requires_operator_token_when_configured(
         self, monkeypatch: pytest.MonkeyPatch
@@ -426,13 +463,18 @@ class TestAPIEndpoints:
         assert payload["status"] == "completed"
         assert sum(payload["counts"].values()) == 256
 
-    def test_braket_hardware_requires_aws_credentials(self) -> None:
+    def test_braket_hardware_fails_closed_without_operator_token_config(
+        self, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        monkeypatch.setenv("AWS_ACCESS_KEY_ID", "key")
+        monkeypatch.setenv("AWS_SECRET_ACCESS_KEY", "secret")
+        monkeypatch.delenv("QUANTUM_OPERATOR_TOKEN", raising=False)
         response = client.post(
             "/api/runs/braket-hardware",
             json={"experiment_id": "bell_pair", "shots": 256, "parameters": {}},
         )
         assert response.status_code == 503
-        assert "AWS credentials" in response.json()["detail"]
+        assert "QUANTUM_OPERATOR_TOKEN" in response.json()["detail"]
 
     def test_braket_hardware_requires_operator_token_when_configured(
         self, monkeypatch: pytest.MonkeyPatch
@@ -446,10 +488,10 @@ class TestAPIEndpoints:
         )
         assert response.status_code == 401
 
-    def test_ibm_proof_pack_requires_token(self) -> None:
+    def test_ibm_proof_pack_requires_operator_token_configuration(self) -> None:
         response = client.get("/api/ibm/proof-pack")
         assert response.status_code == 503
-        assert "IBM_QUANTUM_TOKEN" in response.json()["detail"]
+        assert "QUANTUM_OPERATOR_TOKEN" in response.json()["detail"]
 
     def test_run_not_found_returns_404(self) -> None:
         response = client.get("/api/runs/nonexistent-run-id")

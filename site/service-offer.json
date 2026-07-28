@@ -5,9 +5,9 @@
   "repository_url": "https://github.com/KIM3310/quantum-workbench",
   "architecture_url": "https://github.com/KIM3310/quantum-workbench/blob/main/docs/system-architecture.md",
   "revenue_architecture_url": "https://github.com/KIM3310/quantum-workbench/blob/main/docs/revenue-architecture.md",
-  "lead_capture_url": "https://github.com/KIM3310/quantum-workbench/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+Quantum+Workbench",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench&inquiry=consumer-prototype-customization#private-inquiry",
   "productized_offer": "quantum experiment workbench with provider adapters, job inspection, and educational reports",
-  "first_paid_sku": "paid lab workspace, course bundle, and provider-cost planning reports",
+  "first_paid_sku": "private prototype customization for simulator-first lab workspaces, course bundles, and provider-cost planning reports",
   "free_lead_magnet": "free simulator-first demo and static architecture page",
   "search_positioning": {
     "primary_query": "Quantum Workbench experiment provider adapters",
@@ -21,7 +21,7 @@
   },
   "monetization_boundary": {
     "free": "free simulator-first demo and static architecture page",
-    "paid": "paid lab workspace, course bundle, and provider-cost planning reports",
+    "paid": "private prototype customization for simulator-first lab workspaces, course bundles, and provider-cost planning reports",
     "metering_hooks": [
       "workspace_id",
       "plan",
@@ -45,7 +45,7 @@
     "operatingSystem": "Web, serverless, and local development environments",
     "url": "https://kim3310.github.io/quantum-workbench/",
     "codeRepository": "https://github.com/KIM3310/quantum-workbench",
-    "description": "Quantum Workbench: quantum experiment workbench with provider adapters, job inspection, and educational reports. Free entry point: free simulator-first demo and static architecture page. Paid path: paid lab workspace.",
+    "description": "Quantum Workbench: simulator-first quantum experiment workbench with provider adapters, job inspection, and educational reports. Hardware routes require provider credentials and an operator token. Private customization is handled through inquiry, not live checkout.",
     "creator": {
       "@type": "Person",
       "name": "KIM3310",
@@ -62,9 +62,9 @@
       },
       {
         "@type": "Offer",
-        "name": "paid lab workspace, course bundle, and provider-cost planning reports",
+        "name": "private prototype customization for simulator-first lab workspaces, course bundles, and provider-cost planning reports",
         "availability": "https://schema.org/LimitedAvailability",
-        "url": "https://github.com/KIM3310/quantum-workbench/blob/main/docs/revenue-architecture.md"
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench&inquiry=consumer-prototype-customization#private-inquiry"
       }
     ],
     "isAccessibleForFree": true,
@@ -72,20 +72,20 @@
   },
   "commerce": {
     "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench#service-offers",
-    "lane_id": "consumer-learning-supporter-lane",
-    "lane_name": "Consumer Learning Supporter Lane",
-    "billing_mode": "supporter",
-    "price_unit": "supporter bundle from USD 5/month or one-time theme and report packs from USD 20",
-    "fulfillment_kind": "supporter access, export or theme pack, classroom setup notes, and content publishing",
+    "lane_id": "consumer-prototype-customization",
+    "lane_name": "Consumer Prototype Customization",
+    "billing_mode": "one-time",
+    "price_unit": "fixed customization from USD 1,000",
+    "fulfillment_kind": "one audience-specific flow, branded content set, privacy and claim boundary, deployment package, and handoff notes",
     "risk_bucket": "consumer-guarded",
     "checkout": {
-      "provider": "lemon-squeezy",
-      "status": "account-onboarding-required",
-      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench#service-offers"
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench&inquiry=consumer-prototype-customization#private-inquiry"
     },
     "sponsorship": {
       "provider": "github-sponsors",
-      "eligible": true,
+      "eligible": false,
       "status": "sponsors-listing-not-configured"
     },
     "advertising": {

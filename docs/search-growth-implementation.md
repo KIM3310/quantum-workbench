@@ -10,7 +10,7 @@ This repository now exposes a search-readable service surface in addition to the
 | Revenue architecture | [docs/revenue-architecture.md](./revenue-architecture.md) |
 | System architecture | [docs/system-architecture.md](./system-architecture.md) |
 | Public canonical URL | https://kim3310.github.io/quantum-workbench/ |
-| Lead capture URL | https://github.com/KIM3310/quantum-workbench/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+Quantum+Workbench |
+| Lead capture URL | https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench&inquiry=consumer-prototype-customization#private-inquiry |
 | Commercial route | https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench#service-offers |
 
 ## Search Positioning
@@ -18,7 +18,7 @@ This repository now exposes a search-readable service surface in addition to the
 - Primary query: Quantum Workbench experiment provider adapters
 - Secondary queries: Quantum Workbench demo; Quantum Workbench system architecture; Quantum Workbench educational tool; quantum experiment workbench with provider adapters, job inspection, and educational reports service
 - Public entry point: free simulator-first demo and static architecture page
-- Paid boundary: paid lab workspace, course bundle, and provider-cost planning reports
+- Paid boundary: private prototype customization for simulator-first lab workspaces, course bundles, and provider-cost planning reports
 
 ## Conversion Boundary
 
@@ -28,5 +28,6 @@ The public surface stays crawlable and free. Paid value starts when a visitor wa
 
 - Keep the sitemap and robots file aligned with the final production domain.
 - Submit the canonical URL and sitemap in Google Search Console after the domain is connected.
-- The lead-capture path is a GitHub Issue Form so private workspace and paid-package requests create a trackable queue before payment infrastructure is added.
+- The lead-capture path is the central private inquiry route for the `consumer-prototype-customization` lane; no self-serve checkout is configured.
+- Public claims stay simulator-first. IBM Quantum and Braket hardware routes require provider credentials plus `QUANTUM_OPERATOR_TOKEN` and are not public hardware-access offers.
 - Keep exact free-tier quotas out of public promises because provider limits change.

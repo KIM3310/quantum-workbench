@@ -8,6 +8,7 @@ Repository: https://github.com/KIM3310/quantum-workbench
 System architecture: https://github.com/KIM3310/quantum-workbench/blob/main/docs/system-architecture.md
 Revenue architecture: https://github.com/KIM3310/quantum-workbench/blob/main/docs/revenue-architecture.md
 Lead capture: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench&inquiry=consumer-prototype-customization#private-inquiry
+Resource route: https://kim3310-doeon-kim-portfolio.pages.dev/resources/quantum-workbench/
 Commercial route: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench#service-offers
 
 Use this project as a runnable or inspectable reference for Quantum Workbench demo, Quantum Workbench system architecture, Quantum Workbench educational tool, quantum experiment workbench with provider adapters, job inspection, and educational reports service. Public claims are simulator-first; IBM Quantum and Braket hardware routes require provider credentials plus an operator token.

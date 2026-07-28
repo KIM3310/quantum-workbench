@@ -189,6 +189,7 @@ quantum-workbench/
 - Paid boundary: private prototype customization for simulator-first lab workspaces, course bundles, and provider-cost planning reports
 - Canonical URL: https://kim3310.github.io/quantum-workbench/
 - Lead capture: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench&inquiry=consumer-prototype-customization#private-inquiry
+- Resource route: https://kim3310-doeon-kim-portfolio.pages.dev/resources/quantum-workbench/
 - Commercial route: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench#service-offers
 - Machine-readable offer: [docs/service-offer.json](docs/service-offer.json)
 - Search growth implementation: [docs/search-growth-implementation.md](docs/search-growth-implementation.md)
@@ -196,3 +197,13 @@ quantum-workbench/
 - Claim boundary: public pages use synthetic/local demo data; managed hardware paths require customer/operator credentials and do not imply public hardware access or revenue.
 
 <!-- search-growth-readme:end -->
+
+<!-- KIM3310:AD-DATA-PIVOT:START -->
+## Free Resource, Advertising, and Aggregate Data
+
+- [Public utility and architecture checklist](https://kim3310-doeon-kim-portfolio.pages.dev/resources/quantum-workbench/)
+- Revenue model: contextual advertising on the policy-eligible central resource page.
+- Aggregate value: anonymous aggregate quantum-learning topic interest and resource CTA counts
+- Boundary: ads allowed only on public learning pages; experiment state, saved notes, and result flows are ad-free
+- Consent defaults off, DNT/GPC fail closed, and personal or sensitive data is never sold.
+<!-- KIM3310:AD-DATA-PIVOT:END -->

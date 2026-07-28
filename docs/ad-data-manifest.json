@@ -6,7 +6,7 @@
   "audience": "technical learners and education-content builders",
   "public_resource": {
     "url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/quantum-workbench/",
-    "live_demo": "https://kim3310.github.io/quantum-workbench/",
+    "live_demo": "https://quantum-workbench.pages.dev/",
     "readiness_checklist": [
       "Architecture Summary",
       "Runtime And Data Flow",

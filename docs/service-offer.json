@@ -1,7 +1,7 @@
 {
   "name": "Quantum Workbench",
   "slug": "quantum-workbench",
-  "canonical_url": "https://kim3310.github.io/quantum-workbench/",
+  "canonical_url": "https://quantum-workbench.pages.dev/",
   "repository_url": "https://github.com/KIM3310/quantum-workbench",
   "architecture_url": "https://github.com/KIM3310/quantum-workbench/blob/main/docs/system-architecture.md",
   "revenue_architecture_url": "https://github.com/KIM3310/quantum-workbench/blob/main/docs/revenue-architecture.md",
@@ -43,7 +43,7 @@
     "name": "Quantum Workbench",
     "applicationCategory": "EducationalApplication",
     "operatingSystem": "Web, serverless, and local development environments",
-    "url": "https://kim3310.github.io/quantum-workbench/",
+    "url": "https://quantum-workbench.pages.dev/",
     "codeRepository": "https://github.com/KIM3310/quantum-workbench",
     "description": "Quantum Workbench: simulator-first quantum experiment workbench with provider adapters, job inspection, and educational reports. Hardware routes require provider credentials and an operator token. Private customization is handled through inquiry, not live checkout.",
     "creator": {
@@ -58,7 +58,7 @@
         "price": "0",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://kim3310.github.io/quantum-workbench/"
+        "url": "https://quantum-workbench.pages.dev/"
       },
       {
         "@type": "Offer",

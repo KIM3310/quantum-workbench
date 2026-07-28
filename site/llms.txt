@@ -3,7 +3,7 @@
 Purpose: quantum experiment workbench with provider adapters, job inspection, and educational reports
 Free entry point: free simulator-first demo and static architecture page
 Paid boundary: private prototype customization for simulator-first lab workspaces, course bundles, and provider-cost planning reports
-Canonical URL: https://kim3310.github.io/quantum-workbench/
+Canonical URL: https://quantum-workbench.pages.dev/
 Repository: https://github.com/KIM3310/quantum-workbench
 System architecture: https://github.com/KIM3310/quantum-workbench/blob/main/docs/system-architecture.md
 Revenue architecture: https://github.com/KIM3310/quantum-workbench/blob/main/docs/revenue-architecture.md

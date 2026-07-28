@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-- [Open the public GitHub Pages demo](https://kim3310.github.io/quantum-workbench/)
+- [Open the public GitHub Pages demo](https://quantum-workbench.pages.dev/)
 - Scope: credential-free, synthetic-data demo for technical review paths and evaluators.
 
 > **Curated supporting repo**
@@ -187,7 +187,7 @@ quantum-workbench/
 
 - Public entry: free simulator-first demo and static architecture page
 - Paid boundary: private prototype customization for simulator-first lab workspaces, course bundles, and provider-cost planning reports
-- Canonical URL: https://kim3310.github.io/quantum-workbench/
+- Canonical URL: https://quantum-workbench.pages.dev/
 - Lead capture: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench&inquiry=consumer-prototype-customization#private-inquiry
 - Resource route: https://kim3310-doeon-kim-portfolio.pages.dev/resources/quantum-workbench/
 - Commercial route: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=quantum-workbench#service-offers

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kim3310.github.io/quantum-workbench/sitemap.xml
+Sitemap: https://quantum-workbench.pages.dev/sitemap.xml

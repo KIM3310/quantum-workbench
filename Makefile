@@ -3,8 +3,9 @@ PYTHON ?= python3
 VENV ?= .venv
 VENV_PYTHON := $(VENV)/bin/python
 VENV_STAMP := $(VENV)/.installed-dev
+CF_PAGES_PROJECT ?= quantum-workbench
 
-.PHONY: check-python install lint test repository-verify verify
+.PHONY: check-python install lint test repository-verify verify deploy-pages
 
 check-python:
 	$(PYTHON) -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 11) else "Python 3.11+ is required")'
@@ -34,3 +35,6 @@ repository-verify:
 	$(PYTHON) scripts/validate_architecture_blueprint.py
 
 verify: lint test repository-verify
+
+deploy-pages:
+	npx --yes wrangler@latest pages deploy site --project-name $(CF_PAGES_PROJECT)

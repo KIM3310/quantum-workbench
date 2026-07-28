@@ -8,7 +8,7 @@ Free quantum-learning lab note for explaining circuits, measurement, and experim
 
 - Audience: technical learners and education-content builders
 - Central resource: https://kim3310-doeon-kim-portfolio.pages.dev/resources/quantum-workbench/
-- Live system: https://kim3310.github.io/quantum-workbench/
+- Live system: https://quantum-workbench.pages.dev/
 - Advertising boundary: ads allowed only on public learning pages; experiment state, saved notes, and result flows are ad-free
 - Current ad state: code-ready on the central resource; serving depends on Google AdSense site approval and consent policy.
 

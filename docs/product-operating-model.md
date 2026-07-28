@@ -2,7 +2,7 @@
 
 ## Public Demo
 
-- URL: https://kim3310.github.io/quantum-workbench/
+- URL: https://quantum-workbench.pages.dev/
 - Scope: credential-free synthetic demo surface for quick technical review.
 
 Repository: `quantum-workbench`

@@ -60,10 +60,10 @@ class _ErrorMetrics:
         self, category: str, error: Exception, context: dict[str, Any] | None = None
     ) -> None:
         """Record an error occurrence with optional context."""
+        # Metrics are exposed through an API; raw exception text stays in server logs.
         entry = {
             "category": category,
             "error_type": type(error).__name__,
-            "message": str(error),
             "timestamp": datetime.now(UTC).isoformat(),
         }
         if context:
@@ -530,7 +530,7 @@ def refresh_run(run_id: str) -> dict[str, Any] | None:
         )
         record["hardware_job"]["status"] = "provider_error"
         record["status"] = "submitted"
-        record["warning"] = f"Could not refresh job yet: {exc}"
+        record["warning"] = "IBM Quantum job status is temporarily unavailable."
 
     record["updated_at"] = _utc_now()
     return STORE.upsert_run(record)
@@ -1014,7 +1014,7 @@ def _list_ibm_backends() -> dict[str, Any]:
         return {
             "configured": True,
             "backends": [],
-            "message": f"Could not query IBM Quantum backends: {exc}",
+            "message": "IBM Quantum backends are temporarily unavailable.",
         }
 
     normalized = []
@@ -1067,7 +1067,7 @@ def _list_braket_backends() -> dict[str, Any]:
         return {
             "configured": True,
             "backends": [],
-            "message": f"Could not query Amazon Braket backends: {exc}",
+            "message": "Amazon Braket backends are temporarily unavailable.",
         }
 
     normalized = []
@@ -1150,7 +1150,7 @@ def _refresh_braket_run(record: dict[str, Any]) -> dict[str, Any]:
                 "error": str(exc),
             },
         )
-        record["warning"] = f"Could not refresh Braket task yet: {exc}"
+        record["warning"] = "Amazon Braket task status is temporarily unavailable."
     record["updated_at"] = _utc_now()
     return STORE.upsert_run(record)
 

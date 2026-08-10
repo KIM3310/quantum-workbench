@@ -12,6 +12,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from app.main import app
+from app.quantum import runtime as quantum_runtime
 from app.quantum.experiments import (
     analyze_counts,
     build_braket_experiment,
@@ -384,6 +385,49 @@ class TestAPIEndpoints:
             "h2_vqe_mini",
         } <= experiment_ids
 
+    def test_backends_redact_provider_exception_details(
+        self, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        ibm_detail = "sensitive IBM provider detail at /srv/private/ibm.py"
+        braket_detail = "sensitive Braket provider detail at /srv/private/aws.py"
+
+        class FailingIBMService:
+            def backends(self, **_kwargs: Any) -> list[Any]:
+                raise RuntimeError(ibm_detail)
+
+        class FailingAwsDevice:
+            @staticmethod
+            def get_devices(**_kwargs: Any) -> list[Any]:
+                raise OSError(braket_detail)
+
+        monkeypatch.setattr(
+            quantum_runtime, "_build_service", lambda: FailingIBMService()
+        )
+        monkeypatch.setattr(quantum_runtime, "_build_braket_session", lambda: object())
+        monkeypatch.setattr(quantum_runtime, "AwsDevice", FailingAwsDevice)
+        monkeypatch.setattr(
+            quantum_runtime, "ERROR_METRICS", quantum_runtime._ErrorMetrics()
+        )
+
+        response = client.get("/api/backends")
+
+        assert response.status_code == 200
+        payload = response.json()
+        assert (
+            payload["ibm_quantum"]["message"]
+            == "IBM Quantum backends are temporarily unavailable."
+        )
+        assert (
+            payload["aws_braket"]["message"]
+            == "Amazon Braket backends are temporarily unavailable."
+        )
+        assert ibm_detail not in response.text
+        assert braket_detail not in response.text
+
+        metrics_response = client.get("/api/error-metrics")
+        assert ibm_detail not in metrics_response.text
+        assert braket_detail not in metrics_response.text
+
     def test_local_run_returns_counts_and_analysis(self) -> None:
         response = client.post(
             "/api/runs/local",
@@ -496,6 +540,83 @@ class TestAPIEndpoints:
     def test_run_not_found_returns_404(self) -> None:
         response = client.get("/api/runs/nonexistent-run-id")
         assert response.status_code == 404
+
+    def test_ibm_run_refresh_redacts_provider_exception_details(
+        self, monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+    ) -> None:
+        provider_detail = "sensitive IBM refresh detail at /srv/private/refresh.py"
+        store = RunStore(tmp_path / "ibm-refresh-runs.json")
+        store.upsert_run(
+            {
+                "run_id": "ibm-refresh",
+                "experiment_id": "bell_pair",
+                "mode": "hardware",
+                "status": "submitted",
+                "created_at": "2026-08-10T00:00:00+00:00",
+                "updated_at": "2026-08-10T00:00:00+00:00",
+                "hardware_job": {"job_id": "ibm-job", "status": "submitted"},
+            }
+        )
+
+        class FailingIBMService:
+            def job(self, _job_id: str) -> Any:
+                raise RuntimeError(provider_detail)
+
+        monkeypatch.setattr(quantum_runtime, "STORE", store)
+        monkeypatch.setattr(
+            quantum_runtime, "_build_service", lambda: FailingIBMService()
+        )
+        monkeypatch.setattr(
+            quantum_runtime, "ERROR_METRICS", quantum_runtime._ErrorMetrics()
+        )
+
+        response = client.get("/api/runs/ibm-refresh")
+
+        assert response.status_code == 200
+        assert (
+            response.json()["warning"]
+            == "IBM Quantum job status is temporarily unavailable."
+        )
+        assert provider_detail not in response.text
+        assert provider_detail not in client.get("/api/error-metrics").text
+
+    def test_braket_run_refresh_redacts_provider_exception_details(
+        self, monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+    ) -> None:
+        provider_detail = "sensitive Braket refresh detail at /srv/private/task.py"
+        store = RunStore(tmp_path / "braket-refresh-runs.json")
+        store.upsert_run(
+            {
+                "run_id": "braket-refresh",
+                "experiment_id": "bell_pair",
+                "mode": "braket-hardware",
+                "status": "submitted",
+                "created_at": "2026-08-10T00:00:00+00:00",
+                "updated_at": "2026-08-10T00:00:00+00:00",
+                "hardware_job": {"job_id": "braket-task", "status": "submitted"},
+            }
+        )
+
+        class FailingAwsQuantumTask:
+            def __init__(self, _job_id: str, **_kwargs: Any) -> None:
+                raise OSError(provider_detail)
+
+        monkeypatch.setattr(quantum_runtime, "STORE", store)
+        monkeypatch.setattr(quantum_runtime, "_build_braket_session", lambda: object())
+        monkeypatch.setattr(quantum_runtime, "AwsQuantumTask", FailingAwsQuantumTask)
+        monkeypatch.setattr(
+            quantum_runtime, "ERROR_METRICS", quantum_runtime._ErrorMetrics()
+        )
+
+        response = client.get("/api/runs/braket-refresh")
+
+        assert response.status_code == 200
+        assert (
+            response.json()["warning"]
+            == "Amazon Braket task status is temporarily unavailable."
+        )
+        assert provider_detail not in response.text
+        assert provider_detail not in client.get("/api/error-metrics").text
 
     def test_runs_list_returns_list(self) -> None:
         response = client.get("/api/runs")

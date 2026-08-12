@@ -12,7 +12,7 @@
   <meta property="og:title" content="Project Guide | Quantum Workbench">
   <meta property="og:description" content="Free quantum-learning lab note for explaining circuits, measurement, and experiments. Source-backed guide for technical learners and education-content builders.">
   <meta property="og:url" content="https://quantum-workbench.pages.dev/guide">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Project Guide | Quantum Workbench","description":"Free quantum-learning lab note for explaining circuits, measurement, and experiments. Source-backed guide for technical learners and education-content builders.","url":"https://quantum-workbench.pages.dev/guide","dateModified":"2026-07-28","author":{"@type":"Person","name":"KIM3310","url":"https://github.com/KIM3310"},"publisher":{"@type":"Person","name":"KIM3310","url":"https://kim3310-doeon-kim-portfolio.pages.dev"},"isAccessibleForFree":true}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Project Guide | Quantum Workbench","description":"Free quantum-learning lab note for explaining circuits, measurement, and experiments. Source-backed guide for technical learners and education-content builders.","url":"https://quantum-workbench.pages.dev/guide","dateModified":"2026-07-28","author":{"@type":"Person","name":"Doeon Kim","alternateName":"KIM3310","url":"https://github.com/KIM3310","sameAs":["https://kim3310-doeon-kim-portfolio.pages.dev","https://www.linkedin.com/in/doeon-kim-4742a2388"]},"publisher":{"@type":"Person","name":"Doeon Kim","alternateName":"KIM3310","url":"https://kim3310-doeon-kim-portfolio.pages.dev","sameAs":["https://github.com/KIM3310","https://www.linkedin.com/in/doeon-kim-4742a2388"]},"isAccessibleForFree":true}</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4973160293737562" crossorigin="anonymous"></script>
   <style>
     :root { color-scheme: light; --ink: #17201f; --muted: #52605d; --line: #cbd2ce; --paper: #ffffff; --ground: #f5f6f4; --green: #126455; --coral: #c94732; --gold: #b67a00; }
@@ -74,12 +74,12 @@
     </header>
 
     <article><h3>Live Demo</h3>
-<ul><li><a href="https://quantum-workbench.pages.dev/" rel="noopener">Open the public GitHub Pages demo</a></li><li>Scope: credential-free, synthetic-data demo for technical review paths and evaluators.</li></ul>
+<ul><li><a href="https://quantum-workbench.pages.dev/" rel="noopener">Open the public Cloudflare Pages demo</a></li><li>Scope: credential-free, synthetic-data demo for technical review paths and evaluators.</li></ul>
 <p><strong>Curated supporting repo</strong> This repository is kept as optional proof, but it no longer leads the portfolio. Current front door: <strong>agent-orchestration-benchmark, tool-call-finetune-lab, and stage-pilot</strong>. Reason: Broad education/research tooling is less targeted than the current AI platform, governance, and ops lanes.</p>
 <p>A web-based experiment desk for running quantum circuits across local simulators, Amazon Braket, and IBM Quantum hardware, then comparing results side by side.</p>
 <h3>System Overview</h3>
 <p>A quantum experiment desk that shows research-tool discipline: local simulation first, managed backends second.</p>
-<div class="table-scroll"><table><thead><tr><th>Area</th><th>Details</th></tr></thead><tbody><tr><td>Users</td><td>Research teams, students, technical reviewers, and cloud/quantum platform evaluators.</td></tr><tr><td>Technical path</td><td>Validate the demo, README, architecture notes, and quality gate before deeper workflow review.</td></tr><tr><td>System scope</td><td>Qiskit/Braket framing, local simulation, optional managed-backend adapters, and experiment review surfaces.</td></tr><tr><td>Operating boundary</td><td>Managed backend use should be opt-in and budget-controlled; local simulation remains the safe default.</td></tr><tr><td>Evaluation path</td><td>Run the local simulation path and inspect generated experiment outputs and adapter boundaries.</td></tr></tbody></table></div>
+<div class="table-scroll"><table><thead><tr><th>Area</th><th>Details</th></tr></thead><tbody><tr><td>Users</td><td>Research teams, students, technical reviewers, and cloud/quantum platform evaluators.</td></tr><tr><td>System scope</td><td>Qiskit/Braket framing, local simulation, optional managed-backend adapters, and experiment review surfaces.</td></tr><tr><td>Operating boundary</td><td>Managed backend use should be opt-in and budget-controlled; local simulation remains the safe default.</td></tr><tr><td>Evaluation path</td><td>Run the local simulation path and inspect generated experiment outputs and adapter boundaries.</td></tr></tbody></table></div>
 <h3>Evaluation Path</h3>
 <ul><li><strong>Start here:</strong> Generate one circuit, inspect the explanation, then compare the simulation output.</li><li><strong>Local demo:</strong> Run the Quick Start commands and open <code>http://127.0.0.1:8000/</code>.</li><li><strong>Checks:</strong> Run <code>pytest -v</code> and the architecture validation script when reviewing repository posture.</li></ul>
 <h3>Architecture Notes</h3>
@@ -128,7 +128,7 @@ export AWS_DEFAULT_REGION=&quot;us-west-1&quot;</code></pre>
                                  | Simulator |   | Simulator |   | Hardware  |
                                  +-----------+   +-----------+   +-----------+</code></pre>
 <h3>Tests</h3>
-<p>58 tests covering circuit construction, backend selection, result parsing, API contracts, chemistry workflow, and store persistence.</p>
+<p>The automated suite covers circuit construction, backend selection, result parsing, API contracts, the chemistry workflow, and store persistence.</p>
 <pre><code>pytest -v</code></pre>
 <h3>Project structure</h3>
 <pre><code>quantum-workbench/

@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-- [Open the public GitHub Pages demo](https://quantum-workbench.pages.dev/)
+- [Open the public Cloudflare Pages demo](https://quantum-workbench.pages.dev/)
 - Scope: credential-free, synthetic-data demo for technical review paths and evaluators.
 
 > **Curated supporting repo**
@@ -21,7 +21,6 @@ A quantum experiment desk that shows research-tool discipline: local simulation 
 | Area | Details |
 |---|---|
 | Users | Research teams, students, technical reviewers, and cloud/quantum platform evaluators. |
-| Technical path | Validate the demo, README, architecture notes, and quality gate before deeper workflow review. |
 | System scope | Qiskit/Braket framing, local simulation, optional managed-backend adapters, and experiment review surfaces. |
 | Operating boundary | Managed backend use should be opt-in and budget-controlled; local simulation remains the safe default. |
 | Evaluation path | Run the local simulation path and inspect generated experiment outputs and adapter boundaries. |
@@ -135,7 +134,7 @@ If credentials aren't set, hardware routes are blocked and local simulation stil
 
 ## Tests
 
-58 tests covering circuit construction, backend selection, result parsing, API contracts, chemistry workflow, and store persistence.
+The automated suite covers circuit construction, backend selection, result parsing, API contracts, the chemistry workflow, and store persistence.
 
 ```bash
 pytest -v

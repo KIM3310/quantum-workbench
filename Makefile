@@ -1,13 +1,26 @@
+SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
-PYTHON ?= python3
 VENV ?= .venv
 VENV_PYTHON := $(VENV)/bin/python
 VENV_STAMP := $(VENV)/.installed-dev
+PYTHON_MIN_VERSION := 3.11
+PYTHON_CANDIDATES := $(VENV_PYTHON) python3.13 python3.12 python3.11 python3
+PYTHON ?= $(shell for py in $(PYTHON_CANDIDATES); do \
+	if command -v $$py >/dev/null 2>&1 && $$py -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 11) else 1)' >/dev/null 2>&1; then \
+		command -v $$py; \
+		break; \
+	fi; \
+done)
 CF_PAGES_PROJECT ?= quantum-workbench
 
 .PHONY: check-python install lint test repository-verify verify deploy-pages
 
 check-python:
+	@if [ -z "$(PYTHON)" ]; then \
+		echo "Python $(PYTHON_MIN_VERSION)+ is required." >&2; \
+		echo "Install Python $(PYTHON_MIN_VERSION)+ or run: make PYTHON=/path/to/python$(PYTHON_MIN_VERSION) <target>" >&2; \
+		exit 1; \
+	fi
 	$(PYTHON) -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 11) else "Python 3.11+ is required")'
 
 $(VENV_PYTHON): check-python

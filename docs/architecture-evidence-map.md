@@ -9,7 +9,7 @@ This repository is now curated as supporting material. Review it only after the 
 | Field | Notes |
 |---|---|
 | Repository | `quantum-workbench` |
-| Status | Archived supporting repository |
+| Status | Supporting (active; not a flagship) |
 | Lane | B2B/B2C education and research tooling |
 | Primary reader | Students, research teams, workshop instructors, and cloud/quantum platform evaluators. |
 | Why it moved back | Broad education/research tooling is less targeted than the current AI platform, governance, and ops lanes. |
@@ -20,7 +20,7 @@ This repository is now curated as supporting material. Review it only after the 
 1. Start with the successor repositories named above.
 2. Use this repository only for optional domain breadth or historical product exploration.
 3. Check `docs/repository-positioning.md` before presenting it externally.
-4. Keep the archived/supporting status visible in any external writeup or technical walkthrough.
+4. Keep its active supporting (not flagship) status visible in any external writeup or technical walkthrough.
 
 ## Evidence
 

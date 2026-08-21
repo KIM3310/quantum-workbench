@@ -1,5 +1,7 @@
 # Quantum Workbench
 
+[![CI](https://github.com/KIM3310/quantum-workbench/actions/workflows/ci.yml/badge.svg)](https://github.com/KIM3310/quantum-workbench/actions/workflows/ci.yml)
+
 ## Live Demo
 
 - [Open the public Cloudflare Pages demo](https://quantum-workbench.pages.dev/)
@@ -29,7 +31,7 @@ A quantum experiment desk that shows research-tool discipline: local simulation 
 
 - **Start here:** Generate one circuit, inspect the explanation, then compare the simulation output.
 - **Local demo:** Run the Quick Start commands and open `http://127.0.0.1:8000/`.
-- **Checks:** Run `pytest -v` and the architecture validation script when reviewing repository posture.
+- **Checks:** Run `make verify` for lint, tests, and repository/architecture validation.
 
 ## Service Launch Playbook
 
@@ -40,7 +42,7 @@ A quantum experiment desk that shows research-tool discipline: local simulation 
 - [Architecture guide](docs/architecture-evidence-map.md) summarizes the system scope, first files to inspect, runtime commands, and known boundaries.
 - [Quality notes](docs/quality-gate.md) lists the local checks, CI surface, and release expectations for this repository.
 - [Enterprise readiness notes](docs/enterprise-readiness.md) outlines security, data, operations, integration, and handoff expectations.
-- [Repository positioning](docs/repository-positioning.md) explains why this repository is archived/supporting and where the current technical entry points live.
+- [Repository positioning](docs/repository-positioning.md) explains why this active repository is a supporting project rather than a portfolio flagship and where the current technical entry points live.
 
 ## What it does
 
@@ -69,14 +71,12 @@ Historical hardware run on `ibm_torino` (2026-03-17). This is evidence of adapte
 ## Quick Start
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -U pip
-python -m pip install -e ".[dev]"
-uvicorn app.main:app --reload
+make install
+.venv/bin/python -m uvicorn app.main:app --reload
 ```
 
-Open `http://127.0.0.1:8000/`
+The Makefile selects an available Python 3.11+ interpreter. To choose one explicitly, run
+`make PYTHON=/path/to/python3.11 install`. Open `http://127.0.0.1:8000/`.
 
 ### IBM Quantum (optional)
 ```bash
@@ -137,7 +137,7 @@ If credentials aren't set, hardware routes are blocked and local simulation stil
 The automated suite covers circuit construction, backend selection, result parsing, API contracts, the chemistry workflow, and store persistence.
 
 ```bash
-pytest -v
+make verify
 ```
 
 ## Project structure

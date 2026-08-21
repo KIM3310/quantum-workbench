@@ -2,6 +2,9 @@
 .venv311/
 __pycache__/
 .pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 *.egg-info/
 artifacts/run_history.json
 dist/

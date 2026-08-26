@@ -20,7 +20,7 @@ dependencies = [
 dev = [
   "httpx2>=2.12,<3",
   "pytest>=9.0.3,<10",
-  "ruff==0.16.3",
+  "ruff==0.16.4",
   "setuptools>=83",
 ]
 
